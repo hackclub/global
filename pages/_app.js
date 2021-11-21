@@ -17,6 +17,12 @@ export default class App extends NextApp {
           colors: { ...theme.colors, ...theme.colors.modes.dark, modes: {} }
         }}
       >
+        <Meta
+          as={Head}
+          title="Hack Club" 
+          image="https://cdn.glitch.com/f0afe4d3-a031-4c0e-8dd5-766cd9ae1e8b%2Ftea_team.jpg?1550999670860" 
+          color="#ec3750"
+        />
         <GitHub />
         <nav>
           <Container variant="copy">
