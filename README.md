@@ -4,7 +4,11 @@ The goal of this project is to enable the creation of simplified versions of our
 
 This site uses Next.js' internationalization and middleware features. MDX is used for content and Theme UI for styling.
 
-## Adding a site
+## Sites
+
+- [hackclub.es](https://hackclub.es)
+
+## Adding a Site
 
 1. Create a new MDX file in the `pages/copy` directory. The name of the file should be the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) code for the language you intend to write the site in. For example, if I was adding a Portuguese site I would create a `pages/copy/pt.mdx` file.
 
