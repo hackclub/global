@@ -6,6 +6,7 @@ import theme from '@hackclub/theme'
 import { ThemeProvider, Container, Heading, Box } from 'theme-ui'
 import GitHub from '../components/github'
 import Meta from '@hackclub/meta'
+import Head from 'next/head'
 
 export default class App extends NextApp {
   render() {
