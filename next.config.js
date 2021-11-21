@@ -9,8 +9,7 @@ module.exports = withMDX({
         domain: 'hackclub.es',
         defaultLocale: 'es',
         http: true
-      },
-     
+      }
     ]
   }
 })

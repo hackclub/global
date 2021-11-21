@@ -4,15 +4,19 @@ import '@hackclub/theme/fonts/reg-bold.css'
 import '../styles/main.css'
 import theme from '@hackclub/theme'
 import { ThemeProvider, Container, Heading, Box } from 'theme-ui'
-import ColorSwitcher from '../components/color-switcher'
 import GitHub from '../components/github'
+import Meta from '@hackclub/meta'
 
 export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <ThemeProvider theme={theme}>
-        <ColorSwitcher />
+      <ThemeProvider
+        theme={{
+          ...theme,
+          colors: { ...theme.colors, ...theme.colors.modes.dark, modes: {} }
+        }}
+      >
         <GitHub />
         <nav>
           <Container variant="copy">
@@ -28,7 +32,7 @@ export default class App extends NextApp {
           <Container variant="copy">
             <h2>Hack Club HQ</h2>
             <p>
-              15 Falls Rd. 
+              15 Falls Rd.
               <br /> Shelburne, VT, 05482
             </p>
             <p>
