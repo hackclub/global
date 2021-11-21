@@ -1,0 +1,143 @@
+h1 {
+  font-size: 3rem;
+  line-height: 1 !important;
+  margin: 1rem 0;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+main a {
+  font-size: 1.25rem !important;
+}
+
+img {
+  display: inline-block;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.125), 0 9px 18px rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+  line-height: 0;
+  max-width: 100%;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+nav {
+  background-color: #e42d42;
+  background-image: radial-gradient(
+    ellipse farthest-corner at top left,
+    #e4732d 6.25%,
+    #e42d42 75%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  height: 80px;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1.8rem !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.github-corner,
+.github-corner:hover {
+  border-bottom: 0;
+}
+
+.github-corner svg {
+  fill: #fff;
+  color: #e42d42;
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+}
+
+.github-corner:hover .octo-arm {
+  -webkit-animation: octocat-wave 560ms ease-in-out;
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@-webkit-keyframes octocat-wave {
+  0%,
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    -webkit-animation: octocat-wave 560ms ease-in-out;
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+footer {
+  color: #5f6e76;
+  font-size: 1.05rem;
+  padding: 1.4rem 0rem;
+  margin-top: 1.4rem!important;
+}
+
+footer a {
+  color: var(--theme-ui-colors-red);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+footer h2 {
+  font-size: 1.25rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}

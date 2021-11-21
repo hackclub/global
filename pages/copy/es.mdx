@@ -1,0 +1,33 @@
+import { Container, Button, Heading } from 'theme-ui'
+
+<Container variant="copy">
+
+<Heading as="h1">
+  Por estudiantes, <br />
+  para estudiantes.
+</Heading>
+
+Hack Club es una red de clubs de ciencias de la computación donde estudiantes aprenden a programar creando proyectos.
+
+<p>
+  <Button
+    as="a"
+    href="https://hackclub.com/?ref=es"
+    variant="ctaLg"
+    sx={{
+      backgroundImage: t => t.util.gx('cyan', 'blue'),
+      color: 'white'
+    }}
+  >
+    Visita nuestra web completa en inglés
+  </Button>
+</p>
+
+<img
+  alt="Students coding at a Hack Club event"
+  src="https://cdn.glitch.com/f0afe4d3-a031-4c0e-8dd5-766cd9ae1e8b%2Ftea_team.jpg?1550999670860"
+  width="512"
+  height="341"
+/>
+
+</Container>
