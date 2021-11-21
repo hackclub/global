@@ -39,7 +39,7 @@ export default class App extends NextApp {
           <Container variant="copy">
             <h2>Hack Club HQ</h2>
             <p>
-              15 Falls Rd.
+              15 Falls Road
               <br /> Shelburne, VT, 05482
             </p>
             <p>
