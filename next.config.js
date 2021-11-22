@@ -19,7 +19,7 @@ module.exports = withMDX({
         domain: 'fr.hackclub.com',
         defaultLocale: 'fr',
         http: true
-      }
+      },
       {
         domain: 'kr.hackclub.com',
         defaultLocale: 'kr',
