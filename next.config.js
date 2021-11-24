@@ -2,7 +2,7 @@ const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
 module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'mdx'],
   i18n: {
-    locales: ['en', 'es', 'fr', 'zh', 'kr'],
+    locales: ['en', 'es', 'fr', 'zh', 'kr', 'tr'],
     defaultLocale: 'en',
     domains: [
       {
@@ -23,6 +23,11 @@ module.exports = withMDX({
       {
         domain: 'kr.hackclub.com',
         defaultLocale: 'kr',
+        http: true
+      },
+      {
+        domain: 'tr.hackclub.com',
+        defaultLocale: 'tr',
         http: true
       }
     ]
