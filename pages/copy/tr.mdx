@@ -1,0 +1,33 @@
+import { Container, Button, Heading } from 'theme-ui'
+
+<Container variant="copy">
+
+<Heading as="h1">
+  Öğrenciler tarafından, <br />
+  öğrenciler için.
+</Heading>
+
+Hack Club, öğrencilerin projeler oluşturarak kodlama öğrendikleri bilgisayar bilimi kulüpleri ağıdır.
+
+<p>
+  <Button
+    as="a"
+    href="https://hackclub.com/?ref=tr"
+    variant="ctaLg"
+    sx={{
+      backgroundImage: t => t.util.gx('cyan', 'blue'),
+      color: 'white'
+    }}
+  >
+    İngilizce web sitenin tamamını ziyaret edin
+  </Button>
+</p>
+
+<img
+  alt="Hack Club etkinliğinde programlama yapan öğrenciler"
+  src="https://cdn.glitch.com/f0afe4d3-a031-4c0e-8dd5-766cd9ae1e8b%2Ftea_team.jpg?1550999670860"
+  width="512"
+  height="341"
+/>
+
+</Container>
