@@ -7,11 +7,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "@hackclub/theme": "^0.3.3",
+    "@emotion/react": "^11.8.2",
     "@hackclub/meta": "^1.1.32",
+    "@hackclub/theme": "^0.3.3",
     "@mdx-js/loader": "^1.6.22",
-    "next": "^12.1.0",
     "@next/mdx": "^10.0.4",
+    "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "theme-ui": "^0.14.1"
