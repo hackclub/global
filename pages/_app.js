@@ -40,8 +40,8 @@ export default class App extends NextApp {
             <h2>Hack Club HQ</h2>
             <p>
               15 Falls Road
-              <br /> Shelburne, VT <br />
-              United States of America, 05482
+              <br /> Shelburne, VT, 05482
+              <br />United States of America
             </p>
             <p>
               EIN: 81-2908499 <br />
