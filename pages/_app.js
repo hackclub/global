@@ -41,6 +41,7 @@ export default class App extends NextApp {
             <p>
               15 Falls Road
               <br /> Shelburne, VT, 05482
+              <br />United States of America
             </p>
             <p>
               EIN: 81-2908499 <br />
