@@ -21,7 +21,7 @@ export default class App extends NextApp {
         <Meta
           as={Head}
           title="Hack Club" 
-          image="https://cdn.glitch.com/f0afe4d3-a031-4c0e-8dd5-766cd9ae1e8b%2Ftea_team.jpg" 
+          image="https://cloud-mbj8axfqr-hack-club-bot.vercel.app/0hackpenn_1.jpg" 
           color="#ec3750"
         />
         <GitHub />
