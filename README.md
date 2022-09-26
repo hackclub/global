@@ -19,7 +19,7 @@ This site uses Next.js' internationalization and middleware features. MDX is use
 
 1. Create a new MDX file in the `pages/copy` directory. The name of the file should be the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) code for the language you intend to write the site in. For example, if I was adding a Portuguese site I would create a `pages/copy/pt.mdx` file.
 
-2. Add content to the MDX file. Base this off of the content on the Spanish site (view it at [`pages/copy/es.mdx`](`/pages/copy/pt.mdx`)). It should contain: a headline such as "By the students, for the students", a sentence long description of Hack Club and then a large button pointing to the English site.
+2. Add content to the MDX file. Base this off of the content on the Spanish site (view it at [`pages/copy/es.mdx`](/pages/copy/es.mdx)). It should contain: a headline such as "By the students, for the students", a sentence long description of Hack Club and then a large button pointing to the English site.
 
 3. Edit the locales field in `next.config.js` to include the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) code of your language.
 
