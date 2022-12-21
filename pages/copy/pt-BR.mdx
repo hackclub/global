@@ -1,0 +1,33 @@
+import { Container, Button, Heading } from 'theme-ui'
+
+<Container variant="copy">
+
+<Heading as="h1">
+  Feito por estudantes, <br />
+  para estudantes.
+</Heading>
+
+Hack Club é uma rede de clubs de ciencias da computação onde os estudantes aprendem a programar criando projetos.
+
+<p>
+  <Button
+    as="a"
+    href="https://hackclub.com/?ref=es"
+    variant="ctaLg"
+    sx={{
+      backgroundImage: t => t.util.gx('cyan', 'blue'),
+      color: 'white'
+    }}
+  >
+    Visite nosso site completo em ingles
+  </Button>
+</p>
+
+<img
+  alt="Estudantes programando em um evento de Hack Club"
+  src="https://cloud-mbj8axfqr-hack-club-bot.vercel.app/0hackpenn_1.jpg"
+  width="512"
+  height="341"
+/>
+
+</Container>
