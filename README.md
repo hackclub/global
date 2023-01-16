@@ -33,7 +33,16 @@ This site uses Next.js' internationalization and middleware features. MDX is use
     }
     ```
 
-5. Make a PR to this repo! The maintainers will support you in setting up the domain for hosting.
+    a. If you're using a `.hackclub.com` subdomain, submit a PR to [`hackclub/dns`](https://github.com/hackclub/dns) to add your `.hackclub.com` subdomain. Add a record to `hackclub.yaml` in the following format:
+    
+    ```yaml
+    SUBDOMAIN_NAME:
+      - ttl: 1
+        type: CNAME
+        value: cname.vercel-dns.com.
+    ```
+
+6. Make a PR to this repo! The maintainers will support you in setting up the domain for hosting.
 
 **Reach out to `@sampoder` on Slack if you need any support. Thank you for your help!**
 
