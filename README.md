@@ -15,6 +15,7 @@ This site uses Next.js' internationalization and middleware features. MDX is use
 - [pl.hackclub.com](https://pl.hackclub.com)
 - [gr.hackclub.com](https://gr.hackclub.com)
 - [ms.hackclub.com](https://ms.hackclub.com)
+- [ur.hackclub.com](https://ur.hackclub.com/)
 
 ## Adding a Site
 
