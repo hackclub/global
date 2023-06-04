@@ -15,7 +15,9 @@ This site uses Next.js' internationalization and middleware features. MDX is use
 - [pl.hackclub.com](https://pl.hackclub.com)
 - [gr.hackclub.com](https://gr.hackclub.com)
 - [ms.hackclub.com](https://ms.hackclub.com)
-- [ur.hackclub.com](https://ur.hackclub.com/)
+- [ur.hackclub.com](https://ur.hackclub.com)
+- [jp.hackclub.com](https://jp.hackclub.com)
+- [thai.hackclub.com](https://thai.hackclub.com)
 
 ## Adding a Site
 
@@ -28,7 +30,7 @@ This site uses Next.js' internationalization and middleware features. MDX is use
 4. Add your domain to the domains field in `next.config.js` following the format below. Unless we have acquired a special domain for the site you are adding, use a `.hackclub.com` subdomain.
     ```javascript
     {
-      domain: 'japan.hackclub.com',
+      domain: 'jp.hackclub.com',
       defaultLocale: 'jp',
       http: true
     }
