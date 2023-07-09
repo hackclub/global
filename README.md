@@ -48,5 +48,5 @@ This site uses Next.js' internationalization and middleware features. MDX is use
 
 6. Make a PR to this repo! The maintainers will support you in setting up the domain for hosting.
 
-**Reach out to `@sampoder` on Slack if you need any support. Thank you for your help!**
+**Reach out in `#hq` on Slack if you need any support. Thank you for your help!**
 
