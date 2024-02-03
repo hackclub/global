@@ -1,6 +1,6 @@
 # Hack Club Global Websites
 
-The goal of this project is to enable the creation of simplified versions of our Hack Club site that are translated into global languages. These sites should require practically no maintenance and be very brief. An example is [`hackclub.es`](https://hackclub.es).
+The goal of this project is to enable the creation of simplified versions of our Hack Club site that are translated into global languages. These sites should require practically no maintenance and be very brief. An example is [`hackclub.es`](https://gr.hackclub.com).
 
 This site uses Next.js' internationalization and middleware features. MDX is used for content and Theme UI for styling.
 
