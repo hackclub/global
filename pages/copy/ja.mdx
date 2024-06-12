@@ -1,0 +1,33 @@
+import { Container, Button, Heading } from 'theme-ui'
+
+<Container variant="copy">
+
+<Heading as="h1">
+  学生によって、<br />
+  学生のために
+</Heading>
+
+ハッククラブは高校生のプログラミングクラブのネットワークで、学生はプロジェクトを作成することでコードを学びます。
+
+<p>
+  <Button
+    as="a"
+    href="https://hackclub.com/?ref=fr"
+    variant="ctaLg"
+    sx={{
+      backgroundImage: t => t.util.gx('cyan', 'blue'),
+      color: 'white'
+    }}
+  >
+    英語の完全なサイトを訪問してください！
+  </Button>
+</p>
+
+<img
+  alt="Students coding at a Hack Club event"
+  src="https://cloud-lapsqbi7m-hack-club-bot.vercel.app/0assemble.jpg"
+  width="512"
+  height="341"
+/>
+
+</Container>
