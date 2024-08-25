@@ -21,7 +21,9 @@ module.exports = withMDX({
       'rw',
       'ja',
       'pa',
-      'id'
+      'id',
+      'ru',
+      'uk',
     ],
     defaultLocale: 'en',
     domains: [
@@ -113,6 +115,16 @@ module.exports = withMDX({
       {
         domain: 'rw.hackclub.com',
         defaultLocale: 'rw',
+        http: true
+      },
+      {
+        domain: 'ru.hackclub.com',
+        defaultLocale: 'ru',
+        http: true
+      },
+      {
+        domain: 'uk.hackclub.com',
+        defaultLocale: 'uk',
         http: true
       },
       {
