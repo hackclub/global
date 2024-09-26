@@ -11,7 +11,7 @@ module.exports = withMDX({
       'es',
       'fa',
       'fr',
-      'hin',
+      'hi',
       'id',
       'it',
       'ja',
@@ -72,8 +72,8 @@ module.exports = withMDX({
         http: true
       },
       {
-        domain: 'hin.hackclub.com',
-        defaultLocale: 'hin',
+        domain: 'hi.hackclub.com',
+        defaultLocale: 'hi',
         http: true
       },
       {
