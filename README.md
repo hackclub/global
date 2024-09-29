@@ -6,19 +6,30 @@ This site uses Next.js' internationalization and middleware features. MDX is use
 
 ## Sites
 
+- [az.hackclub.com](https://az.hackclub.com)
 - [bn.hackclub.com](https://bn.hackclub.com)
+- [de.hackclub.com](https://de.hackclub.com)
+- [el.hackclub.com](https://el.hackclub.com)
+- [en.hackclub.com](https://en.hackclub.com)
+- [es.hackclub.com](https://es.hackclub.com)
 - [fa.hackclub.com](https://fa.hackclub.com)
 - [fr.hackclub.com](https://fr.hackclub.com)
-- [gr.hackclub.com](https://gr.hackclub.com)
-- [hin.hackclub.com](https://hin.hackclub.com)
+- [hi.hackclub.com](https://hi.hackclub.com)
+- [id.hackclub.com](https://id.hackclub.com)
+- [it.hackclub.com](https://it.hackclub.com)
 - [ja.hackclub.com](https://ja.hackclub.com)
 - [kr.hackclub.com](https://kr.hackclub.com)
 - [ms.hackclub.com](https://ms.hackclub.com)
+- [nl.hackclub.com](https://nl.hackclub.com)
+- [pa.hackclub.com](https://pa.hackclub.com)
 - [pl.hackclub.com](https://pl.hackclub.com)
+- [ru.hackclub.com](https://ru.hackclub.com)
 - [rw.hackclub.com](https://rw.hackclub.com)
-- [thai.hackclub.com](https://thai.hackclub.com)
+- [th.hackclub.com](https://th.hackclub.com)
 - [tr.hackclub.com](https://tr.hackclub.com)
+- [uk.hackclub.com](https://uk.hackclub.com)
 - [ur.hackclub.com](https://ur.hackclub.com)
+- [vi.hackclub.com](https://vi.hackclub.com)
 - [zh.hackclub.com](https://zh.hackclub.com)
 
 ## Adding a Site
