@@ -16,6 +16,7 @@ module.exports = withMDX({
       'it',
       'ja',
       'kr',
+      'la',
       'ms',
       'nl',
       'pa',
@@ -94,6 +95,11 @@ module.exports = withMDX({
       {
         domain: 'kr.hackclub.com',
         defaultLocale: 'kr',
+        http: true
+      },
+      {
+        domain: 'la.hackclub.com',
+        defaultLocale: 'la',
         http: true
       },
       {
