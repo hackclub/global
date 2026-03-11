@@ -1,6 +1,6 @@
 {
-  "name": "global",
-  "version": "0.1.0",
+  "name": "hackclub-global",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,18 +9,24 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "@emotion/react": "^11.14.0",
+    "@hackclub/meta": "^1.2.0",
+    "@hackclub/theme": "^1.0.0",
+    "@next/mdx": "^16.1.6",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "theme-ui": "^0.17.4"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/node": "^25.4.0",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
-    "typescript": "^5"
+    "eslint": "^10.0.3",
+    "eslint-config-next": "^16.1.6",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
   },
   "ignoreScripts": [
     "sharp",
