@@ -1,0 +1,37 @@
+[
+     {
+        "title": "Flavortown",
+        "logo": "https://cdn.hackclub.com/019c76b8-4f54-7de9-ae34-90b2190c2440/TeQ27w.png",
+        "background": "#7B4942",
+        "stickerImage": "https://cdn.hackclub.com/019c76b5-b513-7f5a-8718-bea38d4abb80/DM6Ztg.avif",
+        "description": "Cook tasty personal projects, win free prizes!",
+        "descriptionColor": "white",
+        "buttonText": "JOIN NOW",
+        "buttonColor": "#AD7858",
+        "link": "https://flavortown.hackclub.com/?ref=site-0"
+    },
+    {
+        "title": "Stasis",
+        "logo": "/stasis-logo-centered.png",
+        "logoScale": 1.1,
+        "background": "#dad2bf",
+        "backgroundImage": "url(/stasis-grid.png)",
+        "backgroundSize": "64px 64px",
+        "description": "Design hardware projects, get them funded, and come to a hackathon in Austin, TX!",
+        "descriptionColor": "white",
+        "buttonText": "JOIN NOW",
+        "buttonColor": "#D95D39",
+        "link": "https://stasis.hackclub.com/?utm_source=cta"
+    },
+{
+        "title": "Sleepover",
+        "logo": "https://cdn.hackclub.com/019c76b7-644a-7ef7-b855-63253c99d2f8/UpZIvQ.png",
+        "background": "#B5AAE7",
+        "stickerImage": "https://cdn.hackclub.com/019c76b5-f328-725e-9d6d-4f5368685ab5/tNACWw.png",
+        "description": "Learn to code and fly to an all girls slumber party hackathon!",
+        "descriptionColor": "white",
+        "buttonText": "JOIN NOW",
+        "buttonColor": "#9DC9F7",
+        "link": "https://sleepover.hackclub.com/?utm_source=site_cta"
+    }
+]

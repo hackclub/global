@@ -1,4 +1,4 @@
-import LocalePage from "./LocalePage";
+import LocalePageClient from "./LocalePageClient";
 import type { Metadata } from "next";
 
 const locales = [
@@ -49,5 +49,5 @@ export async function generateMetadata({
 }
 
 export default function Page() {
-  return <LocalePage />;
+  return <LocalePageClient />;
 }

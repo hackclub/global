@@ -1,0 +1,141 @@
+[
+  {
+    "background": "linear-gradient(to bottom right, #993CCF 0%, rgba(170, 77, 181, 0.95) 17.19%, rgba(193, 99, 146, 0.90) 31.77%, rgba(223, 129, 101, 0.71) 52.08%, rgba(240, 146, 75, 0.60) 63.54%)",
+    "titleColor": "white",
+    "descriptionColor": "white",
+    "title": "Jams",
+    "description": "Collaborative coding workshops where sparks ignite, fears dissolve, and inventions come to life",
+    "img": "https://cloud-7xyxcf3f6-hack-club-bot.vercel.app/0new_project__3_.png",
+    "link": "https://jams.hackclub.com"
+  },
+  {
+    "background": "#0e305b",
+    "backgroundImage": "linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+    "backgroundSize": "50px 50px",
+    "titleColor": "#dbe4ee",
+    "textColor": "#dbe4ee",
+    "descriptionColor": "#dbe4ee",
+    "title": "Blueprint",
+    "description": "Design a hardware project and get up to $400 to make it real",
+    "img": "https://cdn.hackclub.com/019c76b8-9716-7a35-bf79-929ad4d6d873/Y86cSA.png",
+    "link": "https://blueprint.hackclub.com/?utm_source=site-carousel"
+  },
+   {
+    "background": "linear-gradient(to bottom right, rgba(176, 209, 253, 0.7), rgba(222, 215, 247, 0.7))",
+    "titleColor": "#5B4A8A",
+    "descriptionColor": "#3D6098",
+    "title": "Sleepover",
+    "description": "Learn to code, earn prizes like plushies and iPads, and fly out to an all girls slumber party in Chicago!",
+    "img": "https://cdn.hackclub.com/019c76b5-f328-725e-9d6d-4f5368685ab5/tNACWw.png",
+    "link": "https://sleepover.hackclub.com/?utm_source=site-carousel"
+  },
+     {
+    "background": "#D6CEBD",
+    "titleColor": "#D95D39",
+    "descriptionColor": "#443C38",
+    "title": "Stasis",
+    "description": "Get your hardware projects funded and fly to the coolest hardware hackathon in Austin, Texas this May.",
+    "img": "https://cdn.hackclub.com/019c76ba-6439-7c9e-ac28-813ad404e0b5/i8kaDQ.png",
+    "link": "https://stasis.hackclub.com/?utm_source=site-carousel"
+  },
+  {
+    "background": "white",
+    "titleColor": "black",
+    "descriptionColor": "black",
+    "title": "scraps",
+    "description": "Build projects, track your hours, earn scraps, and roll for prizes like hardware, stickers, and rare collectibles!",
+    "img": "https://raw.githubusercontent.com/hackclub/scraps/refs/heads/main/frontend/static/icon.png",
+    "link": "https://scraps.hackclub.com/?utm_source=site-carousel"
+  },
+  {
+    "background": "#ffd966",
+    "titleColor": "black",
+    "descriptionColor": "black",
+    "title": "Hack Club: The Game",
+    "description": "Build projects, then compete in a scavenger hunt adventure game across Manhattan!",
+    "img": "https://raw.githubusercontent.com/CKacha/HCTG-Photos/main/HCTG-Train-Liberty.png",
+    "link": "https://game.hackclub.com/?utm_source=site-carousel"
+  },
+  {
+    "background": "#C76B0F",
+    "titleColor": "#F6D193",
+    "descriptionColor": "#F6D193",
+    "title": "Boba Drops",
+    "description": "Build a static site with HTML and CSS, get free boba!",
+    "img": "https://cloud-oil5vh30l-hack-club-bot.vercel.app/0boba_hc_toolbox.png",
+    "link": "https://hack.club/boba"
+  },
+  {
+    "background": "snow",
+    "titleColor": "dark",
+    "descriptionColor": "black",
+    "title": "Putting The \"You\" In CPU",
+    "description": "Curious exactly what happens when you run a program on your computer? Read this.",
+    "img": "https://cloud-eg2ex8nol-hack-club-bot.vercel.app/0favicon-on-light-removebg-preview.png",
+    "link": "https://cpu.land"
+  },
+  {
+    "background": "#000",
+    "titleColor": "green",
+    "descriptionColor": "white",
+    "title": "Sprig",
+    "description": "Join hundreds of teenagers making tile-based JavaScript games",
+    "img": "https://emoji.slack-edge.com/T0266FRGM/sprig-dino/6f01fec60b51b343.png",
+    "link": "https://sprig.hackclub.com"
+  },
+  {
+    "background": "snow",
+    "titleColor": "dark",
+    "descriptionColor": "black",
+    "title": "Some Assembly Required",
+    "description": "The 4th most starred Assembly repository on GitHub",
+    "img": "https://emoji.slack-edge.com/T0266FRGM/someassemblyrequired/cfacfacaaa2d8b1d.png",
+    "link": "https://github.com/hackclub/some-assembly-required"
+  },
+  {
+    "background": "#271932",
+    "titleColor": "#CAB4D4",
+    "textColor": "#CAB4D4",
+    "title": "SineRider",
+    "description": "Help build a game about love, math, and graphing 💖",
+    "img": "https://emoji.slack-edge.com/T0266FRGM/sinerider/68a0bc1208e885dd.png",
+    "link": "https://sinerider.com"
+  },
+  {
+    "background": "#e9e9e9",
+    "titleColor": "black",
+    "textColor": "black",
+    "descriptionColor": "black",
+    "title": "Nest",
+    "description": "Free Linux server for all Hack Clubbers to host anything they need",
+    "img": "https://emoji.slack-edge.com/T0266FRGM/nest/aa345378581cee0c.png",
+    "link": "https://hackclub.app"
+  },
+  {
+   "background": "#ec3750",
+   "titleColor": "white",
+   "descriptionColor": "white",
+   "title": "YSWS Programs",
+   "description": "Build something amazing, and Hack Club will ship you something epic in return.",
+   "img":"https://cdn.hackclub.com/019c16fa-1702-70f9-8fac-bc4d2731756d/image.png",
+   "link": "https://ysws.hackclub.com"
+  },
+  {
+    "background": "#7B4942",
+    "titleColor": "white",
+    "descriptionColor": "#f0dcc8",
+    "title": "Flavortown",
+    "description": "Build projects, earn cookies, and exchange them for iPads, MacBooks, and more!",
+    "img": "https://cdn.hackclub.com/019c76b5-b513-7f5a-8718-bea38d4abb80/DM6Ztg.avif",
+    "link": "https://flavortown.hackclub.com/?ref=site-carousel"
+  },
+  {
+    "background": "#30AE1F",
+    "titleColor": "#FFFFFF",
+    "descriptionColor": "#FFFFFF",
+    "title": "HackCraft",
+    "description": "Ship a mod - Get Minecraft",
+    "img": "https://emoji.slack-edge.com/T09V59WQY1E/minecraft/308decaa00e556b9.png",
+    "link": "https://hackcraft.hackclub.com/"
+	}
+]

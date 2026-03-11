@@ -1,7 +1,7 @@
 import type { Viewport } from "next";
 import "@hackclub/theme/fonts/reg-bold.css";
-import "../styles/main.css";
 import Providers from "./providers";
+import EmotionRegistry from "./emotion-registry";
 import GitHub from "../components/GitHub";
 
 export const viewport: Viewport = {
@@ -11,9 +11,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <GitHub />
-        <Providers>{children}</Providers>
+      <body suppressHydrationWarning>
+        <EmotionRegistry>
+          <Providers>{children}</Providers>
+        </EmotionRegistry>
       </body>
     </html>
   );
