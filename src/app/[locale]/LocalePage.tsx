@@ -39,6 +39,7 @@ export type SlackData = {
   total_members_count?: number;
   ds?: string;
 };
+import { useTranslations } from "next-intl";
 
 export type Stars = {
   sprig: { stargazerCount: number };
@@ -82,6 +83,8 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
   const [reveal, setReveal] = useState(false);
   const [hover, setHover] = useState(true);
   const [konamiActivated] = useState(false);
+
+  const translate = useTranslations('index');
 
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(
     null,
@@ -207,7 +210,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               }}
               as="h4"
             >
-              Welcome to Hack&nbsp;Club
+              {translate('welcome')}
             </Text>
             <Heading>
               <Text
@@ -223,7 +226,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   width: "100%",
                 }}
               >
-                We are{" "}
+                {translate('header.weare')}{" "}
                 <Text
                   sx={{
                     color: "transparent",
@@ -251,12 +254,12 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     }}
                     aria-hidden="true"
                   >
-                    <Comma>{slackData.total_members_count}</Comma> teen hackers
+                    <Comma>{slackData.total_members_count}</Comma> {translate('header.teenhackers')}
                   </Text>
-                  <Comma>{slackData.total_members_count}</Comma> teen hackers
+                  <Comma>{slackData.total_members_count}</Comma> {translate('header.teenhackers')}
                 </Text>
                 <Box as="br" sx={{ display: ["inline", "none", "none"] }} />{" "}
-                from around the world who code together
+                {translate('header.aroundtheworld')}
               </Text>
               <Box
                 sx={{
@@ -274,7 +277,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   mr={3}
                   sx={{ transformOrigin: "center left" }}
                 >
-                  Join Slack
+                  {translate('headerbuttons.slack').toUpperCase()}
                 </Button>
                 <Button
                   variant="ctaLg"
@@ -294,7 +297,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   <div
                     style={{ display: "flex", alignItems: "center", gap: 4 }}
                   >
-                    Main site (english) <Icon glyph="external" size={32} />
+                    {translate('headerbuttons.mainsite').toUpperCase()} <Icon glyph="external" size={32} />
                   </div>
                   <Text
                     sx={{
@@ -303,7 +306,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                       fontWeight: "normal",
                     }}
                   >
-                    with more info!
+                    {translate('headerbuttons.mainsitesubtext').toLowerCase()}
                   </Text>
                 </Button>
               </Box>
@@ -341,7 +344,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               }}
               title="📸 Photo by Matt Gleich, Hack Clubber in NH!"
             >
-              Hackers at Outernet in Vermont
+              {translate('header.outernetpic')}
             </Badge>
           </Box>
         </Box>
