@@ -84,7 +84,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
   const [hover, setHover] = useState(true);
   const [konamiActivated] = useState(false);
 
-  const translate = useTranslations('index');
+  const translate = useTranslations("index");
 
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(
     null,
@@ -210,7 +210,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               }}
               as="h4"
             >
-              {translate('welcome')}
+              {translate("welcome")}
             </Text>
             <Heading>
               <Text
@@ -226,7 +226,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   width: "100%",
                 }}
               >
-                {translate('header.weare')}{" "}
+                {translate("header.weare")}{" "}
                 <Text
                   sx={{
                     color: "transparent",
@@ -254,12 +254,14 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     }}
                     aria-hidden="true"
                   >
-                    <Comma>{slackData.total_members_count}</Comma> {translate('header.teenhackers')}
+                    <Comma>{slackData.total_members_count}</Comma>{" "}
+                    {translate("header.teenhackers")}
                   </Text>
-                  <Comma>{slackData.total_members_count}</Comma> {translate('header.teenhackers')}
+                  <Comma>{slackData.total_members_count}</Comma>{" "}
+                  {translate("header.teenhackers")}
                 </Text>
                 <Box as="br" sx={{ display: ["inline", "none", "none"] }} />{" "}
-                {translate('header.aroundtheworld')}
+                {translate("header.aroundtheworld")}
               </Text>
               <Box
                 sx={{
@@ -277,7 +279,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   mr={3}
                   sx={{ transformOrigin: "center left" }}
                 >
-                  {translate('headerbuttons.slack').toUpperCase()}
+                  {translate("headerbuttons.slack").toUpperCase()}
                 </Button>
                 <Button
                   variant="ctaLg"
@@ -297,7 +299,8 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   <div
                     style={{ display: "flex", alignItems: "center", gap: 4 }}
                   >
-                    {translate('headerbuttons.mainsite').toUpperCase()} <Icon glyph="external" size={32} />
+                    {translate("headerbuttons.mainsite").toUpperCase()}{" "}
+                    <Icon glyph="external" size={32} />
                   </div>
                   <Text
                     sx={{
@@ -306,7 +309,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                       fontWeight: "normal",
                     }}
                   >
-                    {translate('headerbuttons.mainsitesubtext').toLowerCase()}
+                    {translate("headerbuttons.mainsitesubtext").toLowerCase()}
                   </Text>
                 </Button>
               </Box>
@@ -342,9 +345,9 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 transition: "0.3s ease",
                 // mixBlendMode: 'multiply'
               }}
-              title="📸 Photo by Matt Gleich, Hack Clubber in NH!"
+              title={translate("header.outernetpictitle")}
             >
-              {translate('header.outernetpic')}
+              {translate("header.outernetpic")}
             </Badge>
           </Box>
         </Box>
@@ -362,7 +365,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               as="h1"
               sx={{ fontSize: ["36px", "48px", "56px"] }}
             >
-              Discover the{" "}
+              {translate("firstsection.discoverthe")}{" "}
               <Text
                 as="span"
                 sx={{
@@ -376,9 +379,9 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                joy of code
+                {translate("firstsection.joyofcode")}
               </Text>
-              , together.
+              {translate("firstsection.together")}
             </Text>
             <Text
               variant="subtitle"
@@ -389,16 +392,13 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 maxWidth: "62ch",
               }}
             >
-              Every day, thousands of Hack&nbsp;Clubbers gather online and
-              in-person to make things with code. Whether you're a beginner
-              programmer or have years of experience, there's a place for you at
-              Hack&nbsp;Club. Read about our{" "}
+              {translate("firstsection.everydaytext")}{" "}
               <Link
                 href="https://hackclub.com/philosophy"
                 target="_blank"
                 rel="noopener"
               >
-                hacker ethic
+                {translate("firstsection.hackerethic")}
               </Link>
               .
             </Text>
@@ -562,10 +562,9 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   </Text>
                   <Text as="p" variant="subtitle">
                     <Text as="strong" sx={{ mb: 1 }}>
-                      Connect with other teenage coders
+                      {translate("steps.step1.title")}
                     </Text>
-                    Have a coding question? Looking for project feedback? You'll
-                    find hundreds of fabulous people to talk to in our global{" "}
+                    {translate("steps.step1.text1")}{" "}
                     <Link
                       href="https://hackclub.com/slack"
                       target="_blank"
@@ -573,7 +572,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     >
                       Slack{" "}
                     </Link>
-                    (like Discord), active at all hours.
+                    {translate("steps.step1.text2")}
                   </Text>
                 </Grid>
                 <Grid
@@ -600,14 +599,13 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     }}
                   >
                     <Text as="strong" sx={{ mb: 1 }}>
-                      Build open source learning tools
+                      {translate("steps.step2.title")}
                     </Text>
-                    We build large open source projects together (
+                    {translate("steps.step2.text1")}
                     <Link href="https://github.com/hackclub" target="_blank">
-                      3k+&nbsp;PRs a year
+                      {translate("steps.step2.linktext")}
                     </Link>
-                    ) like this website, a game engine, daily streak system, and
-                    more!
+                    {translate("steps.step2.text2")}
                   </Text>
                 </Grid>
                 <Grid
@@ -628,26 +626,25 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   </Text>
                   <Text as="p" variant="subtitle">
                     <Text as="strong" sx={{ mb: 1 }}>
-                      Gather IRL with other makers
+                      {translate("steps.step3.title")}
                     </Text>
-                    Meet other Hack&nbsp;Clubbers in your community to build
-                    together at one of the 1000+{" "}
+                    {translate("steps.step3.text1")}{" "}
                     <Link
                       href="https://hackclub.com/clubs"
                       target="_blank"
                       rel="noopener"
                     >
-                      Hack&nbsp;Clubs
+                      {translate("steps.step3.hackclubslink")}
                     </Link>{" "}
-                    and{" "}
+                    {translate("steps.step3.and")}{" "}
                     <Link
                       href="https://hackclub.com/hackathons"
                       target="_blank"
                       rel="noopener"
                     >
-                      high school hackathons
+                      {translate("steps.step3.hackathonslink")}
                     </Link>
-                    .
+                    {translate("steps.step3.dot")}
                   </Text>
                 </Grid>
               </Grid>
