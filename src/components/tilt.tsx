@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
-import useMedia from "./lib/use-media";
+import useMedia from "@/lib/use-media";
 
 // NOTE(@lachlanjc): only pass one child!
 const Tilt = ({ options = {}, children, ...props }) => {

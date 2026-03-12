@@ -47,7 +47,6 @@ export type Stars = {
   hackclub: { stargazerCount: number };
   hackathons: { stargazerCount: number };
   onboard: { stargazerCount: number };
-  "sprig-hardware": { stargazerCount: number };
 };
 
 export type PageProps = {

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { css, keyframes } from "@emotion/react";
 import { Box, Container, Flex, Link } from "theme-ui";
-import theme from "./lib/theme";
+import theme from "@/lib/theme";
 import Icon from "./icon";
 import Flag from "./flag";
 import ScrollLock from "react-scrolllock";
@@ -128,20 +128,14 @@ const NavBar = styled(Box, {
 const Navigation = (props) => (
   // REMINDER: This should be no more than 7 links :)
   <NavBar role="navigation" {...props}>
-    <Link href="https://hackclub.com/clubs">
-      Clubs
-    </Link>
+    <Link href="https://hackclub.com/clubs">Clubs</Link>
     <Link href="https://hackclub.com/fiscal-sponsorship">
       Fiscal&nbsp;Sponsorship
     </Link>
-    <Link href="https://hackclub.com/hackathons">
-      Hackathons
-    </Link>
+    <Link href="https://hackclub.com/hackathons">Hackathons</Link>
     <Link href="https://slack.hackclub.com">Join</Link>
     <Link href="https://toolbox.hackclub.com/">Toolbox</Link>
-    <Link href="https://hackclub.com/philanthropy">
-      Donors
-    </Link>
+    <Link href="https://hackclub.com/philanthropy">Donors</Link>
   </NavBar>
 );
 
