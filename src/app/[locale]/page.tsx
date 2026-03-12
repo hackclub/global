@@ -92,30 +92,7 @@ const bankDataPromise = fetch("https://hcb.hackclub.com/stats")
   });
 
 const locales = [
-  "az",
-  "bn",
-  "de",
-  "el",
-  "es",
-  "fa",
-  "fr",
-  "hi",
-  "id",
-  "it",
-  "ja",
-  "kr",
-  "ms",
-  "nl",
-  "pa",
-  "pl",
-  "ru",
-  "rw",
-  "th",
-  "tr",
-  "uk",
-  "ur",
-  "vi",
-  "zh",
+  "en",
 ];
 
 export function generateStaticParams() {

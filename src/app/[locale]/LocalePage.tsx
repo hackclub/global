@@ -63,6 +63,7 @@ export type PageProps = {
     description?: string;
   }[];
 };
+
 const gitHubData: Array<{
   type: string;
   userImage: string;
@@ -690,7 +691,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
           >
             <Box>
               <Text variant="title" sx={{ fontSize: ["36px", 4, 5] }}>
-                Connect with{" "}
+                {translate("connectwithbuilders.connectwith")}{" "}
                 <Text
                   as="span"
                   sx={{
@@ -702,17 +703,16 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     bg: "red",
                   }}
                 >
-                  builders
+                  {translate("connectwithbuilders.builders")}
                 </Text>{" "}
-                from around the world
+                {translate("connectwithbuilders.aroundworld")}
               </Text>
               <Text
                 variant="subtitle"
                 as="p"
                 sx={{ fontSize: ["18px", "20px", "22px"], pb: [3, 0, 0] }}
               >
-                We gather both online and in-person to share our love of code
-                and make things together!
+                {translate("connectwithbuilders.onlineinperson")}
               </Text>
             </Box>
 
@@ -751,7 +751,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                       maxWidth: "20ch",
                     }}
                   >
-                    We build{" "}
+                    {translate("webuild.webuild")}{" "}
                     <Text
                       as="span"
                       sx={{
@@ -761,9 +761,9 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                         color: "orange",
                       }}
                     >
-                      open source
+                      {translate("webuild.opensource")}
                     </Text>{" "}
-                    games and tools together
+                    {translate("webuild.gamestools")}
                   </Text>
                   <Text
                     variant="subtitle"
@@ -774,58 +774,10 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                       maxWidth: "60ch",
                     }}
                   >
-                    In collaboration with engineers on the Hack&nbsp;Club team,
-                    Hack Clubbers build learning tools for each other. Get
-                    involved with these projects by building something with our
-                    tools or contribute to the tools themselves.
+                    {translate("webuild.text")}
                   </Text>
                 </Box>
-                {gitHubData && (
-                  <Flex
-                    sx={{
-                      flexDirection: ["row", null, null, "column"],
-                      gap: [1, 2, 2],
-                      alignItems: ["center", "center", "center", "flex-start"],
-                      flexWrap: "wrap",
-                      width: ["100%", null, null, "fit-content"],
-
-                      "& > a:nth-child(n+4)": {
-                        display: ["none", null, null, "flex"],
-                      },
-                    }}
-                  >
-                    <Text
-                      sx={{
-                        fontSize: ["11px", "11px", "14px"],
-                        textAlign: "left",
-                        lineHeight: "90%",
-                        fontStyle: "italic",
-                        width: "fit-content",
-                      }}
-                    >
-                      Live from GitHub
-                    </Text>
-                    {gitHubData
-                      .filter((data) => !data.user.endsWith("[bot]"))
-                      .slice(0, 4)
-                      .map((data, key) => {
-                        return (
-                          <GitHub
-                            type={
-                              data.type as "commit" | "issue" | "pull_request"
-                            }
-                            img={data.userImage}
-                            user={data.user}
-                            time={data.time}
-                            url={data.url}
-                            message={data.message}
-                            key={key}
-                            opacity={1 / (key / 2 + 1)}
-                          />
-                        );
-                      })}
-                  </Flex>
-                )}
+                {/* live from github would be here, but it's not even displayed on the main site so bye bye it goes */}
               </Flex>
               <Sprig
                 stars={stars.sprig.stargazerCount}
@@ -882,7 +834,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     margin: "auto",
                   }}
                 >
-                  Find your{" "}
+                  {translate("irlcommunity.findyour")}{" "}
                   <Text
                     as="span"
                     sx={{
@@ -892,7 +844,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                       color: "orange",
                     }}
                   >
-                    IRL community.
+                    {translate("irlcommunity.community")}
                   </Text>
                 </Text>
                 <Text
@@ -905,8 +857,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     textAlign: "center",
                   }}
                 >
-                  Thousands of Hack Clubbers organize and participate in
-                  hackathons and after school coding clubs.
+                  {translate("irlcommunity.text")}
                 </Text>
               </Box>
               <Clubs />
@@ -934,7 +885,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 variant="eyebrow"
                 sx={{ fontSize: ["22px", 2, 3], textAlign: "center" }}
               >
-                We've got a lot going on - Let's recap
+                {translate("recap.title")}
               </Text>
               <Text
                 variant="title"
@@ -946,7 +897,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   margin: "auto",
                 }}
               >
-                Find your second home at{" "}
+                {translate("recap.secondhome")}{" "}
                 <Text
                   as="span"
                   sx={{
@@ -958,7 +909,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  Hack&nbsp;Club
+                  {translate("recap.hackclub")}
                 </Text>
               </Text>
             </Box>
@@ -1022,8 +973,8 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 <Stage
                   icon="slack"
                   color="white"
-                  name="Join Our Slack"
-                  desc="Connect with other technical teenagers on Slack and hack on things together."
+                  name={translate("recap.joinourslack")}
+                  desc={translate("recap.slacktext")}
                   sx={{
                     p: {
                       fontSize: ["18px", "20px", "22px"],
@@ -1076,8 +1027,8 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 <Stage
                   icon="github"
                   color="white"
-                  name="Explore Our Open Source Tools"
-                  desc="We're currently building a game engine, daily streak system, graphing game, and more!"
+                  name={translate("recap.opensource")}
+                  desc={translate("recap.opentext")}
                   sx={{
                     p: {
                       fontSize: [1, "16px", "20px"],
@@ -1130,8 +1081,8 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 <Stage
                   icon="clubs"
                   color="white"
-                  name="Start A Club"
-                  desc="Build an in-person community of high school hackers, and we're here to help."
+                  name={translate("recap.startaclub")}
+                  desc={translate("recap.clubtext")}
                   sx={{
                     p: {
                       fontSize: ["18px", "20px", "22px"],

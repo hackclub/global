@@ -5,6 +5,7 @@ import { Box, Flex, Grid, Heading, Image, Link, Text } from "theme-ui";
 import Buttons from "./button";
 import Event from "../events";
 import Comma from "../../comma";
+import { useTranslations } from "next-intl";
 
 const Cover = () => (
   <Box
@@ -43,6 +44,7 @@ const Stats = ({ data, subheading, nonMobile = false }) => (
   </Box>
 );
 export default function Slack({ data, events }) {
+  const translate = useTranslations("index.slackcard")
   return (
     <CardModel
       color="white"
@@ -77,7 +79,7 @@ export default function Slack({ data, events }) {
             maxWidth: [null, null, "70%", null],
           }}
         >
-          Our Online Community
+          {translate("onlinecommunity")}
         </Text>
       </Grid>
       <Grid columns={[1, 1, "1.6fr 1fr", "1.6fr 1fr"]} sx={{ zIndex: 2 }}>
@@ -91,27 +93,23 @@ export default function Slack({ data, events }) {
             variant="subtitle"
             sx={{ fontSize: [1, "16px", "24px"] }}
           >
-            Coding doesn't have to be a solitary activity. At Hack&nbsp;Club, we
-            make remarkable things together, and in our Slack you'll find
-            awesome people to hang out with too. Code together, find your
-            programming community, dream up something wild, or just #lounge.
+            {translate("text1")}
           </Text>
           <Text as="p" variant="subtitle">
-            Occasionally we invite someone we really want to speak to (like Sal
-            Khan, George Hotz, and Lady Ada) and host an{" "}
+            {translate("text2")}{" "}
             <Link
               href="https://hackclub.com/amas"
               target="_blank"
               rel="noopener"
               sx={{ color: "inherit" }}
             >
-              AMA
+              {translate("ama")}
             </Link>{" "}
-            with them.{" "}
+            {translate("withthem")}{" "}
           </Text>
           <Event events={events} />
           <Buttons id="13" link="/slack" icon="slack" primary="purple">
-            Join our Slack
+            {translate("joinslack")}
           </Buttons>
           <Grid
             sx={{
@@ -145,20 +143,20 @@ export default function Slack({ data, events }) {
               >
                 <Stats
                   data={data.readers_count_1d}
-                  subheading="Currently Online"
+                  subheading={translate("currentlyonline")}
                 />
                 <Stats
                   data={data.chats_channels_count_1d}
-                  subheading="Total Channels"
+                  subheading={translate("totalchannels")}
                   nonMobile={true}
                 />
                 <Stats
                   data={data.messages_count_1d}
-                  subheading="Daily Messages"
+                  subheading={translate("dailymessages")}
                 />
                 <Stats
                   data={data.total_members_count}
-                  subheading="Total Members"
+                  subheading={translate("totalmembers")}
                 />
               </Flex>
             </Box>

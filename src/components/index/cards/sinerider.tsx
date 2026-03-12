@@ -3,8 +3,10 @@
 import CardModel from './card-model'
 import { Box, Flex, Grid, Image, Text } from 'theme-ui'
 import Buttons from './button'
+import { useTranslations } from 'next-intl'
 
 export default function Sinerider({ stars }) {
+  const translate = useTranslations("index.sineridercard")
   return (
     <CardModel
       github_link="https://github.com/hackclub/sinerider/"
@@ -34,10 +36,7 @@ export default function Sinerider({ stars }) {
         <Box></Box>
         <Box sx={{ mt: ['-40px', '-40px', '-150px'] }}>
           <Text as="p" variant="subtitle">
-            SineRider is a game about love and graphing, powered by teenage
-            hackers of all kinds: artists, musicians, programmers, storytellers…
-            so if that’s you, come join us! We can always use help keeping
-            everything up to date and running smoothly.
+            {translate("text")}
           </Text>
           <Flex sx={{ flexDirection: 'column', mt: [3, 3, 4] }}>
             <Buttons
@@ -49,7 +48,7 @@ export default function Sinerider({ stars }) {
               id="43"
               sx={{ color: '#271932' }}
             >
-              Play now
+              {translate("playnow")}
             </Buttons>
             <Buttons
               icon="rainbow"
@@ -58,7 +57,7 @@ export default function Sinerider({ stars }) {
               rel="noopener"
               id="44"
             >
-              Join the development
+              {translate("jointhedevelopment")}
             </Buttons>
           </Flex>
         </Box>

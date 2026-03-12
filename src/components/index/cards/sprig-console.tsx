@@ -4,8 +4,10 @@ import { Box, Grid, Image, Text } from "theme-ui";
 import Buttons from "./button";
 import CardModel from "./card-model";
 import Tilt from "../../tilt";
+import { useTranslations } from "next-intl";
 
 export default function SprigConsole({ stars }: { stars?: number }) {
+  const translate = useTranslations("index.sprigconsolecard")
   return (
     <Box sx={{ position: "relative" }}>
       <CardModel
@@ -65,10 +67,7 @@ export default function SprigConsole({ stars }: { stars?: number }) {
               alt="Sprig console"
             />
             <Text as="p" variant="subtitle" mt={[0, null, null]}>
-              Play your own Sprig games on this console, which you can assemble
-              and disassemble. Each kit includes parts needed for getting
-              started with hardware engineering and embedded systems
-              programming.{" "}
+              {translate("text")}{" "}
             </Text>
             <Buttons
               id="6"
@@ -77,7 +76,7 @@ export default function SprigConsole({ stars }: { stars?: number }) {
               primary="#427A43"
               sx={{ mt: [3, 3, 4] }}
             >
-              Build a game and get your console
+              {translate("buildagame")}
             </Buttons>
           </Box>
           <Box></Box>

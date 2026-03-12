@@ -1,4 +1,5 @@
 /** @jsxImportSource theme-ui */
+import { useTranslations } from 'next-intl'
 import Buttons from './button'
 import CardModel from './card-model'
 import { Box, Grid, Flex, Image, Text } from 'theme-ui'
@@ -20,9 +21,7 @@ const Cover = () => (
 )
 
 export default function Clubs() {
-  // let [fooRef, setFooRef] = useState('')
-  // let [toggle, setToggle] = useState(true)
-
+  const translate = useTranslations("index.clubscard")
   return (
     <CardModel
       color="white"
@@ -58,7 +57,7 @@ export default function Clubs() {
           width: 'fit-content'
         }}
       >
-        A Network of 1000+ Coding Clubs
+        {translate("title")}
       </Text>
       <Grid columns={[1, 1, 2]} sx={{ position: 'relative', zIndex: 2 }}>
         <Box>
@@ -67,27 +66,24 @@ export default function Clubs() {
             variant="subtitle"
             sx={{ textShadow: '1px 1px 5px black' }}
           >
-            Join or start a Hack&nbsp;Club and be part of a network of high
-            quality coding clubs where you learn to code entirely through
-            building things.
+            {translate("text1")}
           </Text>
           <Text
             as="p"
             variant="subtitle"
             sx={{ textShadow: '1px 1px 5px black' }}
           >
-            You can start with no experience and build and ship a project every
-            meeting.
+            {translate("text2")}
           </Text>
           <Flex sx={{ flexDirection: 'column', mt: [3, 3, 4] }}>
             <Buttons
-              content="we'll support you with meeting content, stickers, and more"
+              content={translate("buttoncontent")}
               id="2"
               icon="welcome"
               link="https://apply.hackclub.com/"
               primary="red"
             >
-              Start a club
+              {translate("startaclub")}
             </Buttons>
           </Flex>
         </Box>

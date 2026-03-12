@@ -3,6 +3,7 @@
 import CardModel from './card-model'
 import { Box, Card, Flex, Grid, Heading, Image, Text } from 'theme-ui'
 import Buttons from './button'
+import { useTranslations } from 'next-intl'
 
 const WorkshopCard = ({
   slug,
@@ -53,6 +54,7 @@ const WorkshopCard = ({
 )
 
 export default function Workshops({ stars }) {
+  const translate = useTranslations("index.workshopscard")
   return (
     <CardModel
       color="white"
@@ -67,13 +69,12 @@ export default function Workshops({ stars }) {
       highlight="blue"
     >
       <Text variant="title" as="h3" sx={{ fontSize: ['36px', 4, 5] }}>
-        Workshops
+        {translate("title")}
       </Text>
       <Grid columns={[1, 2, 2]} sx={{ gap: 4, height: 'fit-content' }}>
         <Flex sx={{ flexDirection: 'column', height: 'fit-content' }}>
           <Text as="p" variant="subtitle">
-            100+ community-contributed, self-guided coding tutorials and ideas.
-            Learn to code by building, one project at a time.
+            {translate("text")}
           </Text>
           <Buttons
             id="14"
@@ -82,7 +83,7 @@ export default function Workshops({ stars }) {
             primary="white"
             sx={{ color: 'blue', mt: [3, 3, 4] }}
           >
-            Browse The Workshops
+            {translate("browse")}
           </Buttons>
           <Buttons
             // content="click to learn more about how to submit a workshop"
@@ -90,22 +91,22 @@ export default function Workshops({ stars }) {
             link="https://workshops.hackclub.com/submit-a-workshop/"
             icon="event-add"
           >
-            Build A Workshop
+            {translate("build")}
           </Buttons>
         </Flex>
         <Grid sx={{ display: ['none', 'grid', 'grid'] }} columns={[1, 1, 1, 2]}>
           <WorkshopCard
             key="splatter_paint"
             slug="splatter_paint"
-            name="Splatter Paint"
-            description="Crazy colorful splatter paint in your browser with Paper.js"
+            name={translate("splatterpaint")}
+            description={translate("splatterpaintdescription")}
             img="/home/workshops/splatter_paint.png"
           />
           <WorkshopCard
             key="particle_physics"
             slug="particle_physics"
-            name="Particle Physics"
-            description="Create a particle physics simulation and with p5.js"
+            name={translate("particlephysics")}
+            description={translate("particlephysicsdescription")}
             img="/home/workshops/particle_physics.png"
             sx={{ display: ['none', 'none', 'none', 'flex'] }}
           />

@@ -3,8 +3,11 @@
 import CardModel from './card-model'
 import { Box, Flex, Grid, Text } from 'theme-ui'
 import Buttons from './button'
+import { useTranslations } from 'next-intl'
 
+// aka, blot
 export default function Haxidraw({ stars }) {
+  const translate = useTranslations('index.blotcard')
   return (
     <CardModel
       github_link="https://github.com/hackclub/blot/"
@@ -29,9 +32,7 @@ export default function Haxidraw({ stars }) {
             variant="subtitle"
             sx={{ zIndex: 2, position: 'relative' }}
           >
-            Blot is an open source drawing machine and online editor, designed
-            to be a fun and beginner friendly introduction to digital
-            fabrication and generative art.
+            {translate("text")}
           </Text>
         </Box>
         <Box>
@@ -43,7 +44,7 @@ export default function Haxidraw({ stars }) {
               primary="rgba(255, 255, 255, 0.9)"
               sx={{ color: 'black' }}
             >
-              Learn more
+              {translate("learnmore")}
             </Buttons>
             <Buttons
               id="52"
@@ -52,7 +53,7 @@ export default function Haxidraw({ stars }) {
               primary="rgba(255, 255, 255, 0.9)"
               sx={{ color: 'black' }}
             >
-              Create something in the editor
+              {translate("createsomething")}
             </Buttons>
             <Buttons
               id="54"
@@ -61,7 +62,7 @@ export default function Haxidraw({ stars }) {
               overrideColor="rgba(255, 255, 255, 0.7)"
               sx={{ color: 'black' }}
             >
-              Share your creations and chat on Slack
+              {translate("sharecreations")}
             </Buttons>
           </Flex>
         </Box>

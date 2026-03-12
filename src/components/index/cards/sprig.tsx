@@ -4,6 +4,7 @@ import CardModel from './card-model'
 import { Box, Flex, Grid, Image, Link, Text } from 'theme-ui'
 import Buttons from './button'
 import RelativeTime from 'react-relative-time'
+import { useTranslations } from 'next-intl'
 
 function Game({ game, gameImage, gameImage1, ...props }) {
   return (
@@ -167,6 +168,7 @@ function Game({ game, gameImage, gameImage1, ...props }) {
 }
 
 export default function Sprig({ stars, game, gameImage, gameImage1 }) {
+  const translate = useTranslations("index.sprigcard")
   return (
     <CardModel
       github_link="https://github.com/hackclub/sprig/"
@@ -194,26 +196,25 @@ export default function Sprig({ stars, game, gameImage, gameImage1 }) {
             variant="subtitle"
             sx={{ zIndex: 2, position: 'relative' }}
           >
-            Draw, make music, and craft games in our web-based JavaScript game
-            editor, which has been used by 7k+ makers around the world.
+            {translate("text")}
           </Text>
           <Flex sx={{ flexDirection: 'column', mt: [3, 3, 4] }}>
             <Buttons
-              content="click here to get started in our editor"
+              content={translate("button1content")}
               id="6"
               icon="emoji"
               link="https://sprig.hackclub.com/editor"
               primary="#FFDE4D"
               sx={{ color: 'black' }}
             >
-              Build a Sprig game
+              {translate("buildasprig")}
             </Buttons>
             <Buttons
               content="learn more on our github"
               id="8"
               link="https://github.com/hackclub/sprig"
             >
-              Review games / build the engine
+              {translate("reviewgames")}
             </Buttons>
             <Buttons
               // content="we're all hanging out in #sprig on Slack"
@@ -221,7 +222,7 @@ export default function Sprig({ stars, game, gameImage, gameImage1 }) {
               icon="friend"
               link="/slack"
             >
-              Connect with other game devs
+              {translate("connect")}
             </Buttons>
           </Flex>
         </Box>
@@ -233,12 +234,12 @@ export default function Sprig({ stars, game, gameImage, gameImage1 }) {
               position: 'relative'
             }}
           >
-            New from{' '}
+            {translate("newfrom")}{' '}
             <Link
               href="https://sprig.hackclub.com/gallery"
               sx={{ textDecoration: 'none', color: 'inherit' }}
             >
-              the gallery
+              {translate("thegallery")}
             </Link>
             ...
           </Text>

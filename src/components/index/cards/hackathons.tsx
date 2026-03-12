@@ -5,6 +5,7 @@ import { Box, Flex, Grid, Image, Link, Text } from "theme-ui";
 import Buttons from "./button";
 import Dot from "../../dot";
 import { formatDate } from "@/lib/dates";
+import { useTranslations } from "next-intl";
 
 const Cover = () => (
   <Box
@@ -23,6 +24,7 @@ const Cover = () => (
 );
 
 export default function Hackathons({ data, stars }) {
+  const translate = useTranslations("index.hackathonscard")
   return (
     <CardModel
       color="white"
@@ -52,7 +54,7 @@ export default function Hackathons({ data, stars }) {
         as="h3"
         sx={{ fontSize: ["36px", 4, 5], position: "relative", zIndex: 2 }}
       >
-        High School Hackathons
+        {translate("title")}
       </Text>
       <Grid
         columns={[1, 1, 2]}
@@ -60,9 +62,7 @@ export default function Hackathons({ data, stars }) {
       >
         <Box>
           <Text as="p" variant="subtitle">
-            We support the largest network of high school hackathons in the
-            world. From an online community of organizers to free stickers and
-            more!{" "}
+            {translate("text")}{" "}
           </Text>
           <Flex sx={{ flexDirection: "column", mt: [3, 3, 4] }}>
             <Buttons
@@ -71,7 +71,7 @@ export default function Hackathons({ data, stars }) {
               link="https://hackathons.hackclub.com"
               primary="blue"
             >
-              Attend a hackathon
+              {translate("attend")}
             </Buttons>
             <Buttons
               // content="learn more about available resources"
@@ -79,7 +79,7 @@ export default function Hackathons({ data, stars }) {
               icon="bolt"
               link="/hackathons"
             >
-              Organizer? Learn more.
+              {translate("organizer")}
             </Buttons>
           </Flex>
         </Box>
@@ -99,7 +99,7 @@ export default function Hackathons({ data, stars }) {
               as="h4"
               sx={{ fontSize: "small", width: "100%", textAlign: "center" }}
             >
-              <Dot /> Upcoming Hackathons
+              <Dot /> {translate("upcoming")}
             </Text>
             {data.slice(0, 5).map((data) => (
               <Box
@@ -187,7 +187,7 @@ export default function Hackathons({ data, stars }) {
         }}
       >
         <Text sx={{ fontSize: "small", color: "white" }}>
-          Upcoming Hackathons:
+          {translate("upcoming")}:
         </Text>
         <Flex sx={{ gap: "10px" }}>
           {data.slice(0, 2).map((data) => (

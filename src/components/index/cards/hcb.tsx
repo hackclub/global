@@ -3,8 +3,10 @@
 import CardModel from './card-model'
 import { Box, Grid, Heading, Text } from 'theme-ui'
 import Buttons from './button'
+import { useTranslations } from 'next-intl'
 
 export default function Bank({ data }) {
+  const translate = useTranslations("index.hcbcard")
   return (
     <Box sx={{ position: 'relative' }}>
       <CardModel
@@ -29,11 +31,10 @@ export default function Bank({ data }) {
         <Grid columns={[1, '1.3fr 1fr', 2]}>
           <Box>
             <Text as="p" variant="subtitle">
-              Become a 501(c)3 nonprofit and join 700+ teams using HCB to run
-              world-class events.
+              {translate("text")}
             </Text>
             <Text as="p" variant="subtitle">
-              This platform is built and maintained by the Hack&nbsp;Club team.
+              {translate("text2")}
             </Text>
             <Buttons
               id="27"
@@ -42,7 +43,7 @@ export default function Bank({ data }) {
               primary="red"
               sx={{ mt: [0, 2, 3] }}
             >
-              Start fundraising!
+              {translate("startfundraising")}
             </Buttons>
             <Box
               sx={{
@@ -72,20 +73,6 @@ export default function Bank({ data }) {
                   }
                 }}
               >
-                {/* <Box
-                  sx={{
-                    backgroundImage: 'url(/home/hcb-screen.webp)',
-                    zIndex: 2,
-                    position: 'absolute',
-                    margin: 'auto',
-                    top: '8px',
-                    left: '35px',
-                    width: '75%',
-                    height: '70%',
-                    backgroundSize: '100%',
-                    backgroundRepeat: 'no-repeat'
-                  }}
-                ></Box> */}
               </Box>
             </Box>
           </Box>
@@ -120,20 +107,6 @@ export default function Bank({ data }) {
             }
           }}
         >
-          {/* <Box
-            sx={{
-              backgroundImage: 'url(/home/hcb-screen.webp)',
-              zIndex: 2,
-              position: 'absolute',
-              margin: 'auto',
-              top: '13px',
-              left: '70px',
-              width: '75%',
-              height: '80%',
-              backgroundSize: '100%',
-              backgroundRepeat: 'no-repeat'
-            }}
-          ></Box> */}
         </Box>
       </Box>
     </Box>
