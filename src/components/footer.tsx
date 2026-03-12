@@ -7,7 +7,9 @@ import NextLink from "next/link";
 import theme from "@hackclub/theme";
 import Icon from "./icon";
 
-const Base = styled(Box, { shouldForwardProp: (prop) => prop !== "dark" })<{ dark?: boolean }>`
+const Base = styled(Box, { shouldForwardProp: (prop) => prop !== "dark" })<{
+  dark?: boolean;
+}>`
   background: ${(props) =>
     props.dark
       ? `${theme.colors.darker} radial-gradient(${theme.colors.black} 1px, transparent 1px)`
@@ -92,12 +94,12 @@ const Footer = ({
           <Heading as="h2" variant="subheadline" mb={3}>
             Hack&nbsp;Club
           </Heading>
-          <Link as={NextLink} href="/philosophy">Philosophy</Link>
-          <Link as={NextLink} href="/team">Our Team & Board</Link>
-          <Link as={NextLink} href="/jobs">Jobs</Link>
-          <Link as={NextLink} href="/brand">Brand Guide</Link>
-          <Link as={NextLink} href="/press">Press Inquiries</Link>
-          <Link as={NextLink} href="/philanthropy">Donate</Link>
+          <Link href="https://hackclub.com/philosophy">Philosophy</Link>
+          <Link href="https://hackclub.com/team">Our Team & Board</Link>
+          <Link href="https://hackclub.com/jobs">Jobs</Link>
+          <Link href="https://hackclub.com/brand">Brand Guide</Link>
+          <Link href="https://hackclub.com/press">Press Inquiries</Link>
+          <Link href="https://hackclub.com/philanthropy">Donate</Link>
         </Box>
         <Box>
           <Heading as="h2" variant="subheadline" mb={3}>
@@ -132,7 +134,7 @@ const Footer = ({
             }}
           >
             <Service
-              href="/slack"
+              href="https://hackclub.com/slack"
               icon="slack-fill"
               name="Slack"
               target="_self"

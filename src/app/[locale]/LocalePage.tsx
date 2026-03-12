@@ -26,7 +26,6 @@ import Workshops from "@/components/index/cards/workshops";
 import HCB from "@/components/index/cards/hcb";
 import Hackathons from "@/components/index/cards/hackathons";
 import Secret from "@/components/secret";
-import MailingList from "@/components/index/cards/mailing-list";
 import Slack from "@/components/index/cards/slack";
 import Icon from "@/components/icon";
 import GitHub from "@/components/index/github";
@@ -34,11 +33,36 @@ import Photo from "@/components/photo";
 import Comma from "@/components/comma";
 import Haxidraw from "@/components/index/cards/haxidraw";
 import CTAS from "@/components/index/ctas";
-import { slackData as SlackDataFetcher } from "@/lib/slackData";
+export type SlackData = {
+  active_users_28d?: number;
+  full_members_count?: number;
+  total_members_count?: number;
+  ds?: string;
+};
 
-const slackData = await SlackDataFetcher();
-const hackathonsData: any[] = [];
-const bankData: any[] = [];
+export type Stars = {
+  sprig: { stargazerCount: number };
+  blot: { stargazerCount: number };
+  sinerider: { stargazerCount: number };
+  hackclub: { stargazerCount: number };
+  hackathons: { stargazerCount: number };
+  onboard: { stargazerCount: number };
+  "sprig-hardware": { stargazerCount: number };
+};
+
+export type PageProps = {
+  bankData: string[];
+  slackData: SlackData;
+  stars: Stars;
+  hackathonsData: any;
+  game: {
+    title: string;
+    filename?: string;
+    author?: string;
+    addedOn?: string;
+    description?: string;
+  }[];
+};
 const gitHubData: Array<{
   type: string;
   userImage: string;
@@ -48,27 +72,17 @@ const gitHubData: Array<{
   message: string;
 }> | null = null;
 
-const stars = {
-  sprig: { stargazerCount: 0 },
-  blot: { stargazerCount: 0 },
-  sinerider: { stargazerCount: 0 },
-  hackclub: { stargazerCount: 0 },
-  hackathons: { stargazerCount: 0 },
-  onboard: { stargazerCount: 0 },
-};
-const game: any[] = [];
 const events: any[] = [];
 import carouselCards from "@/lib/carousel.json";
 const ctaCards: any[] = [];
 const OuternetImgFile = "/home/outernet-110.jpg";
-const consoleCount = 0;
 
-function Page() {
-  const [gameImage, setGameImage] = useState("");
-  const [gameImage1, setGameImage1] = useState("");
+function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
+  const [gameImage] = useState("");
+  const [gameImage1] = useState("");
   const [reveal, setReveal] = useState(false);
   const [hover, setHover] = useState(true);
-  const [konamiActivated, setKonamiActivated] = useState(false);
+  const [konamiActivated] = useState(false);
 
   const [searchParams, setSearchParams] = useState<URLSearchParams | null>(
     null,
@@ -377,7 +391,11 @@ function Page() {
               in-person to make things with code. Whether you're a beginner
               programmer or have years of experience, there's a place for you at
               Hack&nbsp;Club. Read about our{" "}
-              <Link href="/philosophy" target="_blank" rel="noopener">
+              <Link
+                href="https://hackclub.com/philosophy"
+                target="_blank"
+                rel="noopener"
+              >
                 hacker ethic
               </Link>
               .
@@ -546,7 +564,11 @@ function Page() {
                     </Text>
                     Have a coding question? Looking for project feedback? You'll
                     find hundreds of fabulous people to talk to in our global{" "}
-                    <Link href="/slack" target="_blank" rel="noopener">
+                    <Link
+                      href="https://hackclub.com/slack"
+                      target="_blank"
+                      rel="noopener"
+                    >
                       Slack{" "}
                     </Link>
                     (like Discord), active at all hours.
@@ -608,11 +630,19 @@ function Page() {
                     </Text>
                     Meet other Hack&nbsp;Clubbers in your community to build
                     together at one of the 1000+{" "}
-                    <Link href="/clubs" target="_blank" rel="noopener">
+                    <Link
+                      href="https://hackclub.com/clubs"
+                      target="_blank"
+                      rel="noopener"
+                    >
                       Hack&nbsp;Clubs
                     </Link>{" "}
                     and{" "}
-                    <Link href="/hackathons" target="_blank" rel="noopener">
+                    <Link
+                      href="https://hackclub.com/hackathons"
+                      target="_blank"
+                      rel="noopener"
+                    >
                       high school hackathons
                     </Link>
                     .
@@ -807,10 +837,7 @@ function Page() {
               <Haxidraw stars={stars.blot.stargazerCount} />
               <Sinerider stars={stars.sinerider.stargazerCount} />
               <Box as="section" id="sprig">
-                <SprigConsole
-                  stars={stars.sprig.stargazerCount}
-                  consoleCount={consoleCount}
-                />
+                <SprigConsole stars={stars["sprig"].stargazerCount} />
               </Box>
               <Workshops stars={stars.hackclub.stargazerCount} />
             </Box>
@@ -1189,7 +1216,6 @@ function Page() {
             </Box>
           </>
         )}
-        <MailingList />
       </Box>
       <Footer
         dark

@@ -1,9 +1,12 @@
-'use client'
+"use client";
 
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
+import type { SlackData, PageProps } from "./LocalePage";
 
-const LocalePage = dynamic(() => import('./LocalePage'), { ssr: false })
+export type { PageProps };
 
-export default function LocalePageClient() {
-  return <LocalePage />
+const LocalePage = dynamic(() => import("./LocalePage"), { ssr: false });
+
+export default function LocalePageClient(props: PageProps) {
+  return <LocalePage {...props} />;
 }
