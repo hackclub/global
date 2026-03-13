@@ -1,9 +1,12 @@
 "use client";
 
-import locales from "@/generated/locales.json";
 import NextLink from "next/link";
 
-export default function GlobalPageClient() {
+type GlobalPageClientProps = {
+  locales: string[];
+};
+
+export default function GlobalPageClient({ locales }: GlobalPageClientProps) {
   const sortedLocales = [...(locales as string[])].sort((a, b) =>
     a.localeCompare(b)
   );
