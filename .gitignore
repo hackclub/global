@@ -43,3 +43,6 @@ next-env.d.ts
 
 # log
 *.log
+
+# generated locales
+src/generated/locales.json

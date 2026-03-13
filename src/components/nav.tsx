@@ -8,6 +8,7 @@ import Icon from "./icon";
 import Flag from "./flag";
 import ScrollLock from "react-scrolllock";
 import NextLink from "next/link";
+import { useTranslations } from "next-intl";
 
 const rgbaBgColor = (props, opacity) =>
   `rgba(
@@ -125,17 +126,18 @@ const NavBar = styled(Box, {
   }
 `;
 
-const Navigation = (props) => (
-  // REMINDER: This should be no more than 7 links :)
+const Navigation = ({ translate, ...props }) => (
   <NavBar role="navigation" {...props}>
-    <Link href="https://hackclub.com/clubs">Clubs</Link>
+    <Link href="https://hackclub.com/clubs">{translate("clubs")}</Link>
     <Link href="https://hackclub.com/fiscal-sponsorship">
-      Fiscal&nbsp;Sponsorship
+      {translate("fiscalsponsorship")}
     </Link>
-    <Link href="https://hackclub.com/hackathons">Hackathons</Link>
-    <Link href="https://slack.hackclub.com">Join</Link>
-    <Link href="https://toolbox.hackclub.com/">Toolbox</Link>
-    <Link href="https://hackclub.com/philanthropy">Donors</Link>
+    <Link href="https://hackclub.com/hackathons">
+      {translate("hackathons")}
+    </Link>
+    <Link href="https://slack.hackclub.com">{translate("join")}</Link>
+    <Link href="https://toolbox.hackclub.com/">{translate("toolbox")}</Link>
+    <Link href="https://hackclub.com/philanthropy">{translate("donors")}</Link>
   </NavBar>
 );
 
@@ -171,6 +173,8 @@ export default function Header({
   const [scrolled, setScrolled] = useState(false);
   const [toggled, setToggled] = useState(false);
   const [mobile, setMobile] = useState(false);
+
+  const translate = useTranslations("index.navbar");
 
   const onScroll = () => {
     const newState = window.scrollY >= 16;
@@ -224,6 +228,7 @@ export default function Header({
       <Content>
         <Flag scrolled={scrolled || fixed} />
         <Navigation
+          translate={translate}
           as="nav"
           aria-hidden={!!mobile}
           color={baseColor}
@@ -234,6 +239,7 @@ export default function Header({
         </ToggleContainer>
       </Content>
       <Navigation
+        translate={translate}
         as="nav"
         aria-hidden={!mobile}
         isMobile

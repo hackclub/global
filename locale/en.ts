@@ -1,10 +1,16 @@
 // docs:
 // - \u00A0 used for non-breaking spaces in "Hack Club", "Hack Clubbers", similar occurences.
 
-import build from "next/dist/build";
-
 const messages = {
   index: {
+    navbar: {
+      clubs: "Clubs",
+      fiscalsponsorship: "Fiscal\u00A0Sponsorship",
+      hackathons: "Hackathons",
+      join: "Join",
+      toolbox: "Toolbox",
+      donors: "Donors",
+    },
     welcome: `Welcome to Hack\u00A0Club`,
     header: {
       weare: "We are",
@@ -126,9 +132,11 @@ const messages = {
       browse: "Browse The Workshops",
       build: "Build A Workshop",
       splatterpaint: "Splatter Paint",
-      splatterpaintdescription: "Crazy colorful splatter paint in your browser with Paper.js",
+      splatterpaintdescription:
+        "Crazy colorful splatter paint in your browser with Paper.js",
       particlephysics: "Particle Physics",
-      particlephysicsdescription: "Create a particle physics simulation and with p5.js",
+      particlephysicsdescription:
+        "Create a particle physics simulation and with p5.js",
     },
     irlcommunity: {
       findyour: "Find your",
@@ -141,8 +149,10 @@ const messages = {
       text1: `Join or start a Hack&nbsp;Club and be part of a network of high
               quality coding clubs where you learn to code entirely through
               building things.`,
-      text2: "You can start with no experience and build and ship a project every meeting.",
-      buttoncontent: "we'll support you with meeting content, stickers, and more",
+      text2:
+        "You can start with no experience and build and ship a project every meeting.",
+      buttoncontent:
+        "we'll support you with meeting content, stickers, and more",
       startaclub: "Start a club",
     },
     hackathonscard: {
@@ -157,7 +167,8 @@ const messages = {
     hcbcard: {
       // it's HCB, not hack club bank
       text: "Become a 501(c)3 nonprofit and join 700+ teams using HCB to run world-class events.",
-      text2: "This platform is built and maintained by the Hack&nbsp;Club team.",
+      text2:
+        "This platform is built and maintained by the Hack&nbsp;Club team.",
       startfundraising: "Start fundraising!",
     },
     recap: {
@@ -165,11 +176,14 @@ const messages = {
       secondhome: "Find your second home at",
       hackclub: "Hack\u00A0Club",
       joinourslack: "Join our Slack",
-      slacktext: "Connect with other technical teenagers on Slack and hack on things together.",
+      slacktext:
+        "Connect with other technical teenagers on Slack and hack on things together.",
       opensource: "Explore Our Open Source Tools",
-      opentext: "We're currently building a game engine, daily streak system, graphing game, and more!",
+      opentext:
+        "We're currently building a game engine, daily streak system, graphing game, and more!",
       startaclub: "Start A Club",
-      clubtext: "Build an in-person community of high school hackers, and we're here to help.",
+      clubtext:
+        "Build an in-person community of high school hackers, and we're here to help.",
     },
     footer: {
       philosophy: "Philosophy",
@@ -186,7 +200,7 @@ const messages = {
       privacy: "Privacy & Terms",
       calltollfree: "(call toll-free)",
       nonprofit: "nonprofit",
-    }
+    },
   },
 };
 

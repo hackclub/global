@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from 'next-intl/plugin';
+import locales from './src/generated/locales.json' assert { type: 'json' };
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  allowedDevOrigins: locales.map(locale => `${locale}.hackclub.com`), // for cross-origin requests
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "cloud-lapsqbi7m-hack-club-bot.vercel.app", },

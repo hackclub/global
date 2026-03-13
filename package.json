@@ -3,7 +3,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "prebuild": "bun run gen-locales",
+    "predev": "bun run gen-locales",
+    "gen-locales": "bun scripts/generate-locales.ts",
     "dev": "next dev",
+    "dev:host": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
