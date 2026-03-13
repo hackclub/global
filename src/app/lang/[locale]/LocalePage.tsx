@@ -61,6 +61,8 @@ export type PageProps = {
     addedOn?: string;
     description?: string;
   }[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  carouselCards: any;
 };
 
 const gitHubData: Array<{
@@ -73,11 +75,11 @@ const gitHubData: Array<{
 }> | null = null;
 
 const events: any[] = [];
-import carouselCards from "@/lib/carousel.json";
+
 const ctaCards: any[] = [];
 const OuternetImgFile = "/home/outernet-110.jpg";
 
-function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
+function Page({ bankData, slackData, stars, hackathonsData, game, carouselCards }: PageProps) {
   const [gameImage] = useState("");
   const [gameImage1] = useState("");
   const [reveal, setReveal] = useState(false);
@@ -268,7 +270,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 <Button
                   variant="ctaLg"
                   as="a"
-                  {...({ href: "/slack" } as any)}
+                  {...({ href: "https://slack.hackclub.com" } as any)}
                   mt={[3, 0, 0]}
                   mr={3}
                   sx={{ transformOrigin: "center left" }}
@@ -927,7 +929,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
             >
               <Card
                 as="a"
-                {...({ href: "/slack" } as any)}
+                {...({ href: "https://slack.hackclub.com" } as any)}
                 target="_blank"
                 rel="noopener"
                 variant="interactive"
@@ -1052,7 +1054,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   }
                 }}
                 as="a"
-                {...({ href: "/clubs" } as any)}
+                {...({ href: "https://hackclub.com/clubs" } as any)}
                 variant="interactive"
                 target="_blank"
                 rel="noopener"

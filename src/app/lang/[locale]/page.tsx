@@ -117,6 +117,19 @@ export async function generateMetadata({
   };
 }
 
+// try to fetch from hackclub.com/carousel.json, if that fails, use the local one.
+import carouselCards from "@/lib/carousel.json";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let carouselCardsResult: any;
+try {
+  const response = await fetch("https://hackclub.com/carousel.json");
+  if (!response.ok) throw new Error("Network response was not ok");
+  carouselCardsResult = await response.json();
+} catch (error) {
+  console.warn("Failed to fetch carousel data, using local fallback:", error);
+  carouselCardsResult = carouselCards;
+}
+
 export default async function Page() {
   const [slackData, bankData, stars, hackathonsData] = await Promise.all([
     slackDataPromise,
@@ -132,6 +145,7 @@ export default async function Page() {
       stars={stars}
       hackathonsData={hackathonsData}
       game={game}
+      carouselCards={carouselCardsResult}
     />
   );
 }
