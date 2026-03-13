@@ -1,21 +1,21 @@
 // @ts-nocheck
 /** @jsxImportSource theme-ui */
-import { Box, Button, Text } from 'theme-ui'
-import ReactTooltip from '../../react-tooltip'
-import Icon from '@hackclub/icons'
+import { Box, Button, Text } from "theme-ui";
+import ReactTooltip from "../../react-tooltip";
+import Icon from "@hackclub/icons";
 
 type ButtonsProps = {
-  children: React.ReactNode
-  icon?: string
-  customIcon?: React.ReactNode
-  id: string
-  content?: React.ReactNode
-  link?: string
-  primary?: boolean | string
-  overrideColor?: string
-  zIndex?: number
-  sx?: any
-}
+  children: React.ReactNode;
+  icon?: string;
+  customIcon?: React.ReactNode;
+  id: string;
+  content?: React.ReactNode;
+  link?: string;
+  primary?: boolean | string;
+  overrideColor?: string;
+  zIndex?: number;
+  sx?: any;
+};
 
 export default function Buttons({
   children,
@@ -30,12 +30,18 @@ export default function Buttons({
   sx,
   ...props
 }: ButtonsProps) {
-  const fontWeight = primary ? '700' : '400'
+  const fontWeight = primary ? "700" : "400";
 
   return (
     <Box
       as="button"
-      sx={{ background: 'transparent', border: 'none', color: 'white', zIndex: zIndex ||0, ...sx }}
+      sx={{
+        background: "transparent",
+        border: "none",
+        color: "white",
+        zIndex: zIndex || 0,
+        ...sx
+      }}
       py={1}
       tabIndex={-1}
     >
@@ -45,39 +51,42 @@ export default function Buttons({
         data-effect="solid"
         data-tip
         sx={{
-          background: (typeof primary === 'string' ? primary : undefined) || overrideColor || 'rgb(255, 255, 255, 0.3)',
-          borderRadius: '100px',
-          border: 'none',
-          display: 'flex',
-          alignItems: 'center',
-          color: 'inherit',
-          px: '3',
-          py: primary ? '12px' : 2,
-          width: 'fit-content',
-          textTransform: 'none',
-          fontSize: primary ? ['18px', '20px', '22px'] : [1, '16px', '18px'],
-          backdropFilter: 'blur(2px)',
+          background:
+            (typeof primary === "string" ? primary : undefined) ||
+            overrideColor ||
+            "rgb(255, 255, 255, 0.3)",
+          borderRadius: "100px",
+          border: "none",
+          display: "flex",
+          alignItems: "center",
+          color: "inherit",
+          px: "3",
+          py: primary ? "12px" : 2,
+          width: "fit-content",
+          textTransform: "none",
+          fontSize: primary ? ["18px", "20px", "22px"] : [1, "16px", "18px"],
+          backdropFilter: "blur(2px)",
           fontWeight: fontWeight,
-          zIndex: 999,
+          zIndex: 999
         }}
         as="a"
-        href={link || '/'}
+        href={link || "/"}
         target="_blank"
         rel="noreferrer"
         {...props}
       >
         {customIcon ? (
-          <Box sx={{ marginRight: 2, display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ marginRight: 2, display: "flex", alignItems: "center" }}>
             {customIcon}
           </Box>
         ) : (
           <Icon
-            glyph={(icon || 'plus-fill') as any}
+            glyph={(icon || "plus-fill") as any}
             size={24}
-            style={{ color: 'inherit', marginRight: 2 }}
+            style={{ color: "inherit", marginRight: 2 }}
           />
         )}
-        <Text sx={{ fontFamily: 'Phantom Sans', textAlign: 'left' }}>
+        <Text sx={{ fontFamily: "Phantom Sans", textAlign: "left" }}>
           {children}
         </Text>
       </Button>
@@ -88,7 +97,7 @@ export default function Buttons({
         delayUpdate={500}
         clickable={true}
         getContent={() => {
-          return null
+          return null;
         }}
         className="custom-tooltip-radius custom-arrow-radius"
         arrowRadius="2"
@@ -97,5 +106,5 @@ export default function Buttons({
         {content}
       </ReactTooltip>
     </Box>
-  )
+  );
 }

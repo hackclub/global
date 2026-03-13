@@ -18,7 +18,7 @@ const Tilt = ({ options = {}, children, ...props }) => {
         glare: true,
         "max-glare": 0.25,
         gyroscope: false,
-        ...options,
+        ...options
       });
     }
 

@@ -9,7 +9,7 @@ import {
   Grid,
   Heading,
   Link,
-  Text,
+  Text
 } from "theme-ui";
 import { useEffect, useRef, useState } from "react";
 import Nav from "@/components/nav";
@@ -89,7 +89,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
   const [searchParams] = useState<URLSearchParams | null>(() =>
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search)
-      : null,
+      : null
   );
 
   useEffect(() => {
@@ -106,21 +106,21 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
     { alt: "Map of Hack Clubs around the world", src: "/home/map.png" },
     {
       alt: "Hack Clubbers at SpaceX HQ in LA",
-      src: "/home/zephyr-spacex.jpeg",
+      src: "/home/zephyr-spacex.jpeg"
     },
     {
       alt: "MA Hacks, Hack Clubber organized hackathon",
-      src: "/home/mahacks.jpeg",
+      src: "/home/mahacks.jpeg"
     },
     { alt: "AMA with Sal Khan", src: "/home/ama.png" },
-    { alt: "Hack Clubbers at Flagship, 2019", src: "/home/flagship_4.jpg" },
+    { alt: "Hack Clubbers at Flagship, 2019", src: "/home/flagship_4.jpg" }
   ];
 
   // janky right now and does not show last image
 
   useEffect(() => {
     console.log(
-      `White sheets of paper\nWaiting to be printed on\nA blank console waits`,
+      `White sheets of paper\nWaiting to be printed on\nA blank console waits`
     );
   }, [count, images.length]);
 
@@ -153,7 +153,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
         as="main"
         sx={{
           overflowX: "hidden",
-          position: "relative",
+          position: "relative"
         }}
       >
         <Secret
@@ -177,7 +177,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
             pb: [2, 1],
             textAlign: "left",
             position: "relative",
-            overflowX: "hidden",
+            overflowX: "hidden"
           }}
         >
           <BGImg
@@ -193,7 +193,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               mx: "auto",
               py: [4, 4, 4],
               pb: 1,
-              textShadow: "text",
+              textShadow: "text"
             }}
           >
             <Text
@@ -202,7 +202,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 color: "sunken",
                 pb: 2,
                 position: "relative",
-                display: "block",
+                display: "block"
               }}
               as="h4"
             >
@@ -219,7 +219,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   textAlign: "left",
                   fontSize: ["42px", "52px", "64px"],
                   lineHeight: 1.2,
-                  width: "100%",
+                  width: "100%"
                 }}
               >
                 {translate("header.weare")}{" "}
@@ -228,7 +228,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     color: "transparent",
                     ml: 2,
                     mr: 3,
-                    whiteSpace: "nowrap",
+                    whiteSpace: "nowrap"
                   }}
                 >
                   <Text
@@ -243,8 +243,8 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                       whiteSpace: "nowrap",
                       textDecoration: "none",
                       "&:hover": {
-                        cursor: "pointer",
-                      },
+                        cursor: "pointer"
+                      }
                     }}
                     aria-hidden="true"
                   >
@@ -262,7 +262,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   display: "flex",
                   flexWrap: "nowrap",
                   flexDirection: "row",
-                  rowGap: 3,
+                  rowGap: 3
                 }}
               >
                 <Button
@@ -287,7 +287,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-                    alignContent: "center",
+                    alignContent: "center"
                   }}
                 >
                   <div
@@ -300,7 +300,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     sx={{
                       fontSize: "14px",
                       opacity: 0.8,
-                      fontWeight: "normal",
+                      fontWeight: "normal"
                     }}
                   >
                     {translate("headerbuttons.mainsitesubtext").toLowerCase()}
@@ -319,7 +319,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               justifyContent: ["flex-end", "flex-end", "flex-end"],
               marginRight: 2,
               mt: [3, 2, 0],
-              mr: [2, 3, null],
+              mr: [2, 3, null]
             }}
           >
             <Badge
@@ -336,7 +336,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 textDecoration: "none",
                 fontWeight: "normal",
                 ":hover": { opacity: 1 },
-                transition: "0.3s ease",
+                transition: "0.3s ease"
                 // mixBlendMode: 'multiply'
               }}
               title={translate("header.outernetpictitle")}
@@ -351,7 +351,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               position: "relative",
               width: "90vw",
               maxWidth: "layout",
-              margin: "auto",
+              margin: "auto"
             }}
           >
             <Text
@@ -370,7 +370,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   color: "white",
                   background: (t: any) => t.util.gx("red", "orange"),
                   WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  WebkitTextFillColor: "transparent"
                 }}
               >
                 {translate("firstsection.joyofcode")}
@@ -383,7 +383,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               sx={{
                 fontSize: ["18px", "20px", "22px"],
                 pb: [3, 3, 4],
-                maxWidth: "62ch",
+                maxWidth: "62ch"
               }}
             >
               {translate("firstsection.everydaytext")}{" "}
@@ -401,7 +401,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 sx={{
                   position: "relative",
                   height: ["300px", "300px", "300px", "100%"],
-                  py: [3, 3, 3, 0],
+                  py: [3, 3, 3, 0]
                 }}
                 onClick={() => {
                   setCount(count === images.length - 1 ? 0 : count + 1);
@@ -420,12 +420,12 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                           count % 2 === 0 ? "rotate(3deg)" : "rotate(-3deg)",
                         height: "85%",
                         width: ["80%", "80%", "70%", "100%"],
-                        marginLeft: ["10%", "10%", "15%", "0"],
+                        marginLeft: ["10%", "10%", "15%", "0"]
                       },
                       zIndex: 3,
                       "&:hover": {
-                        cursor: "pointer",
-                      },
+                        cursor: "pointer"
+                      }
                     }}
                   >
                     <Photo
@@ -462,12 +462,12 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                           count % 2 === 0 ? "rotate(-3deg)" : "rotate(3deg)",
                         height: "85%",
                         width: ["80%", "80%", "70%", "100%"],
-                        marginLeft: ["10%", "10%", "15%", "0"],
+                        marginLeft: ["10%", "10%", "15%", "0"]
                       },
                       zIndex: 3,
                       "&:hover": {
-                        cursor: "pointer",
-                      },
+                        cursor: "pointer"
+                      }
                     }}
                   >
                     <Photo
@@ -500,12 +500,12 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                           count % 2 === 0 ? "rotate(3deg)" : "rotate(-3deg)",
                         height: "85%",
                         width: ["80%", "80%", "70%", "100%"],
-                        marginLeft: ["10%", "10%", "15%", "0"],
+                        marginLeft: ["10%", "10%", "15%", "0"]
                       },
                       zIndex: 3,
                       "&:hover": {
-                        cursor: "pointer",
-                      },
+                        cursor: "pointer"
+                      }
                     }}
                   >
                     <Photo
@@ -531,10 +531,10 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     lineHeight: "30px",
                     textAlign: "center",
                     fontWeight: "bold",
-                    border: "3px solid currentColor",
+                    border: "3px solid currentColor"
                   },
                   p: { my: 0, fontSize: ["18px", "20px", "22px"] },
-                  strong: { display: "block", fontSize: ["22px", 2, 3] },
+                  strong: { display: "block", fontSize: ["22px", 2, 3] }
                 }}
                 as="ul"
               >
@@ -547,7 +547,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     color: "inherit",
                     position: "relative",
                     textDecoration: "none",
-                    borderRadius: "extra",
+                    borderRadius: "extra"
                   }}
                   as="li"
                 >
@@ -578,7 +578,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     color: "inherit",
                     position: "relative",
                     textDecoration: "none",
-                    borderRadius: "extra",
+                    borderRadius: "extra"
                   }}
                   as="li"
                 >
@@ -589,7 +589,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     as="p"
                     variant="subtitle"
                     sx={{
-                      mt: 0,
+                      mt: 0
                     }}
                   >
                     <Text as="strong" sx={{ mb: 1 }}>
@@ -611,7 +611,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     color: "inherit",
                     position: "relative",
                     textDecoration: "none",
-                    borderRadius: "extra",
+                    borderRadius: "extra"
                   }}
                   as="li"
                 >
@@ -656,7 +656,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
             `,
             backgroundSize: "40px 40px",
             backgroundRepeat: "repeat",
-            position: "relative",
+            position: "relative"
           }}
         >
           <Box
@@ -669,7 +669,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               right: 0,
               bottom: 0,
               bg: "snow",
-              pointerEvents: "none",
+              pointerEvents: "none"
             }}
           />
           <Box
@@ -678,7 +678,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               width: "90vw",
               maxWidth: "layout",
               margin: "auto",
-              zIndex: 5,
+              zIndex: 5
             }}
             py={[4, 4, 5]}
           >
@@ -693,7 +693,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     mx: 0,
                     whiteSpace: "nowrap",
                     color: "white",
-                    bg: "red",
+                    bg: "red"
                   }}
                 >
                   {translate("connectwithbuilders.builders")}
@@ -719,7 +719,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 width: "90vw",
                 maxWidth: "layout",
                 margin: "auto",
-                position: "relative",
+                position: "relative"
               }}
             >
               <Flex
@@ -730,9 +730,9 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     "flex-start",
                     "flex-start",
                     "flex-start",
-                    "center",
+                    "center"
                   ],
-                  gap: "10px",
+                  gap: "10px"
                 }}
               >
                 <Box sx={{ mb: [3, 0, 0] }}>
@@ -741,7 +741,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     as="h2"
                     sx={{
                       fontSize: ["36px", "48px", "56px"],
-                      maxWidth: "20ch",
+                      maxWidth: "20ch"
                     }}
                   >
                     {translate("webuild.webuild")}{" "}
@@ -751,7 +751,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                         borderRadius: "default",
                         mx: 0,
                         whiteSpace: "nowrap",
-                        color: "orange",
+                        color: "orange"
                       }}
                     >
                       {translate("webuild.opensource")}
@@ -764,7 +764,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     sx={{
                       fontSize: ["18px", "20px", "22px"],
                       pb: [3, 0, 0],
-                      maxWidth: "60ch",
+                      maxWidth: "60ch"
                     }}
                   >
                     {translate("webuild.text")}
@@ -793,7 +793,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
               backgroundImage: `url('https://icons.hackclub.com/api/icons/0xF4F7FB/glyph:rep.svg')`,
               backgroundSize: "40px 40px",
               backgroundRepeat: "repeat",
-              backgroundPosition: "10% 10%",
+              backgroundPosition: "10% 10%"
             }}
           >
             <Box
@@ -802,7 +802,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 width: "100%",
                 height: "100%",
                 top: 0,
-                left: 0,
+                left: 0
               }}
             >
               {}
@@ -813,7 +813,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 width: "90vw",
                 maxWidth: "layout",
                 margin: "auto",
-                position: "relative",
+                position: "relative"
               }}
             >
               <Box>
@@ -824,7 +824,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     fontSize: ["36px", "48px", "72px"],
                     width: "18ch",
                     textAlign: "center",
-                    margin: "auto",
+                    margin: "auto"
                   }}
                 >
                   {translate("irlcommunity.findyour")}{" "}
@@ -834,7 +834,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                       borderRadius: "default",
                       mx: 0,
                       whiteSpace: "nowrap",
-                      color: "orange",
+                      color: "orange"
                     }}
                   >
                     {translate("irlcommunity.community")}
@@ -847,7 +847,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     fontSize: ["18px", "24px", "32px"],
                     margin: "auto",
                     pt: 2,
-                    textAlign: "center",
+                    textAlign: "center"
                   }}
                 >
                   {translate("irlcommunity.text")}
@@ -869,7 +869,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
             sx={{
               width: "90vw",
               maxWidth: "layout",
-              margin: "auto",
+              margin: "auto"
             }}
           >
             <Box>
@@ -887,7 +887,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   fontSize: ["36px", "48px", "72px"],
                   width: "16ch",
                   textAlign: "center",
-                  margin: "auto",
+                  margin: "auto"
                 }}
               >
                 {translate("recap.secondhome")}{" "}
@@ -899,7 +899,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     whiteSpace: ["wrap", "nowrap"],
                     background: (t: any) => t.util.gx("red", "orange"),
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    WebkitTextFillColor: "transparent"
                   }}
                 >
                   {translate("recap.hackclub")}
@@ -916,13 +916,13 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 "> a, > div": {
                   borderRadius: "extra",
                   boxShadow: "elevated",
-                  p: [3, null, 4],
+                  p: [3, null, 4]
                 },
                 span: {
                   boxShadow:
-                    "-2px -2px 6px rgba(255,255,255,0.125), inset 2px 2px 6px rgba(0,0,0,0.1), 2px 2px 8px rgba(0,0,0,0.0625)",
+                    "-2px -2px 6px rgba(255,255,255,0.125), inset 2px 2px 6px rgba(0,0,0,0.1), 2px 2px 8px rgba(0,0,0,0.0625)"
                 },
-                svg: { fill: "currentColor" },
+                svg: { fill: "currentColor" }
               }}
             >
               <Card
@@ -939,14 +939,14 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   position: "relative",
                   ".icon": {
                     transition:
-                      "transform 0.25s ease-in-out, opacity 0.25s ease-in-out",
+                      "transform 0.25s ease-in-out, opacity 0.25s ease-in-out"
                   },
                   ":hover,:focus": {
                     ".icon": {
                       transform: "translateX(28px) translateY(-28px)",
-                      opacity: 0,
-                    },
-                  },
+                      opacity: 0
+                    }
+                  }
                 }}
               >
                 <Icon
@@ -960,7 +960,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     opacity: 0.3,
                     fontSize: ["18px", "20px", "22px"],
                     zIndex: 3,
-                    color: "white !important",
+                    color: "white !important"
                   }}
                 />
                 <Stage
@@ -970,11 +970,11 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   desc={translate("recap.slacktext")}
                   sx={{
                     p: {
-                      fontSize: ["18px", "20px", "22px"],
+                      fontSize: ["18px", "20px", "22px"]
                     },
                     h3: {
-                      fontSize: ["22px", 2, 3],
-                    },
+                      fontSize: ["22px", 2, 3]
+                    }
                   }}
                 />
               </Card>
@@ -988,14 +988,14 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   position: "relative",
                   ".icon": {
                     transition:
-                      "transform 0.25s ease-in-out, opacity 0.25s ease-in-out",
+                      "transform 0.25s ease-in-out, opacity 0.25s ease-in-out"
                   },
                   ":hover,:focus": {
                     ".icon": {
                       transform: "translateX(28px) translateY(-28px)",
-                      opacity: 0,
-                    },
-                  },
+                      opacity: 0
+                    }
+                  }
                 }}
                 as="a"
                 {...({ href: "https://github.com/hackclub" } as any)}
@@ -1014,7 +1014,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     opacity: 0.3,
                     fontSize: [1, "16px", "20px"],
                     zIndex: 3,
-                    color: "white !important",
+                    color: "white !important"
                   }}
                 />
                 <Stage
@@ -1024,11 +1024,11 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   desc={translate("recap.opentext")}
                   sx={{
                     p: {
-                      fontSize: [1, "16px", "20px"],
+                      fontSize: [1, "16px", "20px"]
                     },
                     h3: {
-                      fontSize: ["22px", 2, 3],
-                    },
+                      fontSize: ["22px", 2, 3]
+                    }
                   }}
                 />
               </Card>
@@ -1042,14 +1042,14 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   position: "relative",
                   ".icon": {
                     transition:
-                      "transform 0.25s ease-in-out, opacity 0.43s ease-in-out",
+                      "transform 0.25s ease-in-out, opacity 0.43s ease-in-out"
                   },
                   ":hover,:focus": {
                     ".icon": {
                       transform: "translateX(28px) translateY(-28px)",
-                      opacity: 0,
-                    },
-                  },
+                      opacity: 0
+                    }
+                  }
                 }}
                 as="a"
                 {...({ href: "/clubs" } as any)}
@@ -1068,7 +1068,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                     opacity: 0.3,
                     fontSize: ["18px", "20px", "22px"],
                     zIndex: 3,
-                    color: "white !important",
+                    color: "white !important"
                   }}
                 />
                 <Stage
@@ -1078,11 +1078,11 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   desc={translate("recap.clubtext")}
                   sx={{
                     p: {
-                      fontSize: ["18px", "20px", "22px"],
+                      fontSize: ["18px", "20px", "22px"]
                     },
                     h3: {
-                      fontSize: ["22px", 2, 3],
-                    },
+                      fontSize: ["22px", 2, 3]
+                    }
                   }}
                 />
               </Card>
@@ -1097,7 +1097,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 position: "fixed",
                 top: 0,
                 width: "100%",
-                zIndex: 1000,
+                zIndex: 1000
               }}
             >
               <Box
@@ -1105,7 +1105,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   position: "relative",
                   margin: "auto",
                   width: "fit-content",
-                  lineHeight: 0,
+                  lineHeight: 0
                 }}
               >
                 <iframe
@@ -1125,7 +1125,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 bottom: 0,
                 right: 0,
                 zIndex: 1000,
-                lineHeight: 0,
+                lineHeight: 0
               }}
             >
               <iframe
@@ -1144,7 +1144,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                 bottom: 0,
                 left: 0,
                 zIndex: 1000,
-                lineHeight: 0,
+                lineHeight: 0
               }}
             >
               <iframe
@@ -1171,8 +1171,8 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
           "> div img": { objectPosition: ["left", "center"] },
           svg: {
             fill: "white",
-            filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.25))",
-          },
+            filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.25))"
+          }
         }}
       />
     </>

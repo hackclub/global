@@ -82,15 +82,15 @@ export default function Footer({
               textDecoration: "none",
               color: "muted",
               transition: "0.125s color ease-in-out",
-              ":hover,:focus": { color: "slate", textDecoration: "underline" },
+              ":hover,:focus": { color: "slate", textDecoration: "underline" }
             },
             "> div > a": {
               display: "block",
-              mb: 2,
+              mb: 2
             },
             "h2,p": { color: "muted" },
             h2: { fontSize: 3 },
-            "a,p": { fontSize: 2 },
+            "a,p": { fontSize: 2 }
           }}
         >
           <Box>
@@ -155,9 +155,9 @@ export default function Footer({
                   mb: 0,
                   transition:
                     "transform .125s ease-in-out, color .125s ease-in-out",
-                  ":hover,:focus": { transform: "scale(1.125)" },
+                  ":hover,:focus": { transform: "scale(1.125)" }
                 },
-                placeItems: "center",
+                placeItems: "center"
               }}
             >
               <Service
@@ -212,8 +212,8 @@ export default function Footer({
           </Box>
         </Grid>
         <Text as="p" variant="caption" sx={{ mt: 3 }}>
-          © {new Date().getFullYear()} Hack&nbsp;Club. 501(c)(3) {translate("footer.nonprofit")} (EIN:
-          81-2908499)
+          © {new Date().getFullYear()} Hack&nbsp;Club. 501(c)(3){" "}
+          {translate("footer.nonprofit")} (EIN: 81-2908499)
         </Text>
       </Container>
     </Base>

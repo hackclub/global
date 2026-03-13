@@ -18,18 +18,18 @@ const Cover = () => (
       backgroundImage:
         "linear-gradient(to bottom,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6))",
       opacity: 0.8,
-      zIndex: 1,
+      zIndex: 1
     }}
   />
 );
 
 export default function Hackathons({ data, stars }) {
-  const translate = useTranslations("index.hackathonscard")
+  const translate = useTranslations("index.hackathonscard");
   return (
     <CardModel
       color="white"
       sx={{
-        backgroundColor: "dark",
+        backgroundColor: "dark"
       }}
       stars={stars}
       github_link="https://github.com/hackclub/hackathons"
@@ -44,7 +44,7 @@ export default function Hackathons({ data, stars }) {
           height: "100%",
           ml: -4,
           mt: -4,
-          zIndex: 0,
+          zIndex: 0
         }}
         alt="A crowd of hackers cheering at Epoch"
       />
@@ -91,7 +91,7 @@ export default function Hackathons({ data, stars }) {
             position: ["absolute", "absolute", "relative"],
             right: 0,
             bottom: 0,
-            display: ["none", "none", "block"],
+            display: ["none", "none", "block"]
           }}
         >
           <Box sx={{ width: "fit-content", float: "right" }}>
@@ -116,8 +116,8 @@ export default function Hackathons({ data, stars }) {
                   my: 2,
                   a: {
                     textDecoration: "none",
-                    color: "white",
-                  },
+                    color: "white"
+                  }
                 }}
                 key={data.name}
               >
@@ -131,7 +131,7 @@ export default function Hackathons({ data, stars }) {
                       borderRadius: "circle",
                       height: ["20px", "25px", "30px"],
                       width: ["20px", "25px", "30px"],
-                      mr: "10px",
+                      mr: "10px"
                     }}
                   >
                     <Image
@@ -142,7 +142,7 @@ export default function Hackathons({ data, stars }) {
                         height: "70%",
                         width: "70%",
                         objectFit: "contain",
-                        borderRadius: "default",
+                        borderRadius: "default"
                       }}
                     />
                   </Box>
@@ -155,7 +155,7 @@ export default function Hackathons({ data, stars }) {
                     sx={{
                       color: "inherit",
                       textDecoration: "none",
-                      fontWeight: "bold",
+                      fontWeight: "bold"
                     }}
                   >
                     {data.name}
@@ -165,7 +165,7 @@ export default function Hackathons({ data, stars }) {
                     sx={{
                       fontWeight: "400",
                       fontSize: "0.8em",
-                      color: "sunken",
+                      color: "sunken"
                     }}
                   >
                     {formatDate({ format: "mmmm d", date: data.start })}
@@ -183,7 +183,7 @@ export default function Hackathons({ data, stars }) {
           alignItems: "center",
           mt: 2,
           justifyContent: "space-between",
-          display: ["block", "block", "none"],
+          display: ["block", "block", "none"]
         }}
       >
         <Text sx={{ fontSize: "small", color: "white" }}>
@@ -205,8 +205,8 @@ export default function Hackathons({ data, stars }) {
                 my: 2,
                 a: {
                   textDecoration: "none",
-                  color: "white",
-                },
+                  color: "white"
+                }
               }}
               key={data.name}
             >
@@ -220,7 +220,7 @@ export default function Hackathons({ data, stars }) {
                     borderRadius: "circle",
                     height: ["20px", "25px", "30px"],
                     width: ["20px", "25px", "30px"],
-                    mr: "5px",
+                    mr: "5px"
                   }}
                 >
                   <Image
@@ -232,7 +232,7 @@ export default function Hackathons({ data, stars }) {
                       width: "70%",
                       objectFit: "contain",
                       borderRadius: "default",
-                      fontSize: "small",
+                      fontSize: "small"
                     }}
                   />
                 </Box>

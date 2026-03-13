@@ -7,7 +7,7 @@ import Tilt from "../../tilt";
 import { useTranslations } from "next-intl";
 
 export default function SprigConsole({ stars }: { stars?: number }) {
-  const translate = useTranslations("index.sprigconsolecard")
+  const translate = useTranslations("index.sprigconsolecard");
   return (
     <Box sx={{ position: "relative" }}>
       <CardModel
@@ -19,7 +19,7 @@ export default function SprigConsole({ stars }: { stars?: number }) {
           backgroundColor: "#1A3C14",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
-          minHeight: ["300px", "400px", "400px"],
+          minHeight: ["300px", "400px", "400px"]
         }}
         highlight="#427A43"
       >
@@ -33,7 +33,7 @@ export default function SprigConsole({ stars }: { stars?: number }) {
             ml: "-24px",
             opacity: "0.4",
             mt: "-24px",
-            zIndex: 0,
+            zIndex: 0
           }}
           alt="Printed circuit board"
         />
@@ -45,7 +45,7 @@ export default function SprigConsole({ stars }: { stars?: number }) {
             position: "relative",
             zIndex: 2,
             fontSize: ["36px", 4, 5],
-            color: "white",
+            color: "white"
           }}
           alt="Sprig console"
         />
@@ -62,7 +62,7 @@ export default function SprigConsole({ stars }: { stars?: number }) {
                 ml: ["-10%", "", ""],
                 mt: ["-10px", "-30px", "", ""],
                 mb: ["-15px", "-30px", "", ""],
-                display: [null, null, "none", "none"],
+                display: [null, null, "none", "none"]
               }}
               alt="Sprig console"
             />
@@ -92,9 +92,9 @@ export default function SprigConsole({ stars }: { stars?: number }) {
             width: ["", "100%", "85%", "70%"],
             display: ["none", "none", "block", "block"],
             "&:hover": {
-              cursor: "pointer",
+              cursor: "pointer"
             },
-            zIndex: 3,
+            zIndex: 3
           }}
           alt="Sprig console"
         />

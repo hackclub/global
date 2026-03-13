@@ -5,11 +5,11 @@ import EmotionRegistry from "./emotion-registry";
 import { NextIntlClientProvider } from "next-intl";
 
 export const viewport: Viewport = {
-  themeColor: "#ec3750",
+  themeColor: "#ec3750"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

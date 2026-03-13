@@ -1,7 +1,7 @@
-import Icon from '../../icon'
-import { Box, Card, Flex, Image, Link, Text } from 'theme-ui'
-import ReactTooltip from '../../react-tooltip'
-import Comma from '../../comma'
+import Icon from "../../icon";
+import { Box, Card, Flex, Image, Link, Text } from "theme-ui";
+import ReactTooltip from "../../react-tooltip";
+import Comma from "../../comma";
 
 /** @jsxImportSource theme-ui */
 const CardModel = ({
@@ -19,75 +19,75 @@ const CardModel = ({
   delay,
   position,
   filter,
-  visible=false,
+  visible = false,
   ...props
 }: {
-  [x: string]: any
-  background?: any
-  children?: any
-  image?: any
-  image_fit?: any
-  link?: any
-  highlight?: any
-  github_link?: any
-  badge?: any
-  text?: any
-  color?: any
-  stars?: any
-  delay?: any
-  position?: any
-  filter?: any
-  visible?: boolean
+  [x: string]: any;
+  background?: any;
+  children?: any;
+  image?: any;
+  image_fit?: any;
+  link?: any;
+  highlight?: any;
+  github_link?: any;
+  badge?: any;
+  text?: any;
+  color?: any;
+  stars?: any;
+  delay?: any;
+  position?: any;
+  filter?: any;
+  visible?: boolean;
 }) => (
   // <Zoom delay={delay}>
-  (<Card
+  <Card
     sx={{
-      position: 'relative',
-      width: '100%',
+      position: "relative",
+      width: "100%",
       color: color,
       my: [4, 4],
-      p: '24px',
-      backgroundSize: 'cover',
+      p: "24px",
+      backgroundSize: "cover",
       backgroundImage: background ? `url(${background})` : undefined,
-      backgroundPosition: 'center bottom',
-      backgroundRepeat: 'no-repeat',
-      '& p': {
-        fontSize: ['18px', '20px', '22px']
+      backgroundPosition: "center bottom",
+      backgroundRepeat: "no-repeat",
+      "& p": {
+        fontSize: ["18px", "20px", "22px"]
       },
-      overflow: visible ? 'visible' : 'hidden'
+      overflow: visible ? "visible" : "hidden"
     }}
     {...props}
   >
     {badge && (
       <Box
         sx={{
-          position: ['relative', 'relative', 'relative', 'absolute'],
-          width: 'fit-content',
+          position: ["relative", "relative", "relative", "absolute"],
+          width: "fit-content",
           right: [0, 0, 0, 3],
           top: [0, 0, 0, 3],
           zIndex: 3,
-          px: '12px',
-          py: '4px',
+          px: "12px",
+          py: "4px",
           mb: 2,
-          float: [null, 'right', null],
+          float: [null, "right", null],
           // background: 'rgba(255,255,255,0.2)',
-          border: 'rgba(255,255,255,0.2) dashed 1px',
-          borderRadius: 'circle',
-          fontWeight: 'bold'
+          border: "rgba(255,255,255,0.2) dashed 1px",
+          borderRadius: "circle",
+          fontWeight: "bold"
         }}
       >
-        {text || 'Happening now'}
+        {text || "Happening now"}
       </Box>
     )}
     {github_link && (
       <Box>
-        {position === 'bottom' ? (
+        {position === "bottom" ? (
           <Flex
             sx={{
-              position: 'absolute',
+              position: "absolute",
               left: 3,
               bottom: 2,
-              alignItems: 'center',
+              alignItems: "center",
               zIndex: 2
             }}
           >
@@ -102,8 +102,8 @@ const CardModel = ({
                 size={42}
                 color="#2351fs"
                 sx={{
-                  color: '#000',
-                  '&:hover': {
+                  color: "#000",
+                  "&:hover": {
                     color: highlight || color
                   }
                 }}
@@ -120,16 +120,16 @@ const CardModel = ({
         ) : (
           <Flex
             sx={{
-              position: 'absolute',
+              position: "absolute",
               right: 2,
               top: 2,
-              alignItems: 'center',
+              alignItems: "center",
               zIndex: 2
               // flexDirection: ['column', 'row', 'row']
             }}
           >
             {stars ? (
-              <Text as="h2" sx={{ fontSize: ['20px', '24px', '28px'] }}>
+              <Text as="h2" sx={{ fontSize: ["20px", "24px", "28px"] }}>
                 ⭐️ <Comma>{stars}</Comma>
               </Text>
             ) : (
@@ -141,8 +141,8 @@ const CardModel = ({
                 size={42}
                 sx={{
                   color: color,
-                  transition: '0.4s',
-                  '&:hover': {
+                  transition: "0.4s",
+                  "&:hover": {
                     color: highlight || color
                   }
                 }}
@@ -157,12 +157,12 @@ const CardModel = ({
         src={image}
         draggable="false"
         sx={{
-          objectFit: image_fit ? image_fit : 'cover',
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          ml: ['-24px', '-32px', '-32px', '-32px'],
-          mt: ['-24px', '-32px', '-32px', '-32px'],
+          objectFit: image_fit ? image_fit : "cover",
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          ml: ["-24px", "-32px", "-32px", "-32px"],
+          mt: ["-24px", "-32px", "-32px", "-32px"],
           zIndex: 0,
           filter
         }}
@@ -171,8 +171,8 @@ const CardModel = ({
     )}
     {children}
     <ReactTooltip />
-  </Card>)
+  </Card>
   // </Zoom>
-)
+);
 
-export default CardModel
+export default CardModel;

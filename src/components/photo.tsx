@@ -44,7 +44,7 @@ const Photo = React.forwardRef<HTMLDivElement, PhotoProps>(function Photo(
     loading,
     ...props
   }: PhotoProps,
-  ref,
+  ref
 ) {
   const showCaption = showAlt && alt;
   return (
@@ -61,7 +61,7 @@ const Photo = React.forwardRef<HTMLDivElement, PhotoProps>(function Photo(
         lineHeight: 0,
         height: "100%",
         ...props.sx,
-        img: { objectFit: "cover", objectPosition: "center" },
+        img: { objectFit: "cover", objectPosition: "center" }
       }}
     >
       <Image
@@ -74,7 +74,7 @@ const Photo = React.forwardRef<HTMLDivElement, PhotoProps>(function Photo(
         style={{
           width: "100%",
           height: "100%",
-          objectFit: "cover",
+          objectFit: "cover"
         }}
       />
       {showCaption && (

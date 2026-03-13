@@ -35,7 +35,7 @@ const fixed = (props) =>
 
 const Root = styled(Box, {
   shouldForwardProp: (prop) =>
-    !["bgColor", "scrolled", "toggled", "fixed", "dark"].includes(prop),
+    !["bgColor", "scrolled", "toggled", "fixed", "dark"].includes(prop)
 })`
   position: fixed;
   top: 0;
@@ -64,12 +64,12 @@ const hoverColor = (name) =>
     muted: "slate",
     slate: "black",
     black: "slate",
-    primary: "error",
+    primary: "error"
   })[name] || "black";
 
 const slide = keyframes({
   from: { transform: "translateY(-25%)", opacity: 0 },
-  to: { transform: "translateY(0)", opacity: 1 },
+  to: { transform: "translateY(0)", opacity: 1 }
 });
 
 const layout = (props) =>
@@ -112,7 +112,7 @@ const layout = (props) =>
         }
       `;
 const NavBar = styled(Box, {
-  shouldForwardProp: (prop) => !["isMobile", "toggled", "dark"].includes(prop),
+  shouldForwardProp: (prop) => !["isMobile", "toggled", "dark"].includes(prop)
 })`
   display: none;
   ${layout};

@@ -30,7 +30,7 @@ export default function Carousel({ cards }) {
               mt: [4, 4, 5],
               maxWidth: "layout",
               width: "90vw",
-              margin: "auto",
+              margin: "auto"
             }}
           >
             {translate("carouseltext")}

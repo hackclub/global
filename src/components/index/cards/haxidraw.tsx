@@ -1,28 +1,28 @@
 // @ts-nocheck
 /** @jsxImportSource theme-ui */
-import CardModel from './card-model'
-import { Box, Flex, Grid, Text } from 'theme-ui'
-import Buttons from './button'
-import { useTranslations } from 'next-intl'
+import CardModel from "./card-model";
+import { Box, Flex, Grid, Text } from "theme-ui";
+import Buttons from "./button";
+import { useTranslations } from "next-intl";
 
 // aka, blot
 export default function Haxidraw({ stars }) {
-  const translate = useTranslations('index.blotcard')
+  const translate = useTranslations("index.blotcard");
   return (
     <CardModel
       github_link="https://github.com/hackclub/blot/"
       color="white"
       sx={{
-        backgroundSize: 'cover',
-        backgroundColor: '#95C9E5',
+        backgroundSize: "cover",
+        backgroundColor: "#95C9E5",
         backgroundImage: `linear-gradient(120deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.4) 70%), url('https://cloud-1tnl6uqvw-hack-club-bot.vercel.app/0image.png')`
       }}
-      position={[null, 'bottom', 'bottom']}
+      position={[null, "bottom", "bottom"]}
       highlight="#2b27f8d9"
       filter="brightness(0.8)"
       stars={stars}
     >
-      <Text variant="title" as="h3" sx={{ fontSize: ['36px', 4, 5] }}>
+      <Text variant="title" as="h3" sx={{ fontSize: ["36px", 4, 5] }}>
         Blot
       </Text>
       <Grid columns={[1, 2]}>
@@ -30,19 +30,19 @@ export default function Haxidraw({ stars }) {
           <Text
             as="p"
             variant="subtitle"
-            sx={{ zIndex: 2, position: 'relative' }}
+            sx={{ zIndex: 2, position: "relative" }}
           >
             {translate("text")}
           </Text>
         </Box>
         <Box>
-          <Flex sx={{ flexDirection: 'column', mt: [3, 3, 4] }}>
+          <Flex sx={{ flexDirection: "column", mt: [3, 3, 4] }}>
             <Buttons
               id="51"
               icon="align-left"
               link="https://blot.hackclub.com"
               primary="rgba(255, 255, 255, 0.9)"
-              sx={{ color: 'black' }}
+              sx={{ color: "black" }}
             >
               {translate("learnmore")}
             </Buttons>
@@ -51,7 +51,7 @@ export default function Haxidraw({ stars }) {
               icon="code"
               link="https://blot.hackclub.com/editor"
               primary="rgba(255, 255, 255, 0.9)"
-              sx={{ color: 'black' }}
+              sx={{ color: "black" }}
             >
               {translate("createsomething")}
             </Buttons>
@@ -60,7 +60,7 @@ export default function Haxidraw({ stars }) {
               icon="slack"
               link="/slack"
               overrideColor="rgba(255, 255, 255, 0.7)"
-              sx={{ color: 'black' }}
+              sx={{ color: "black" }}
             >
               {translate("sharecreations")}
             </Buttons>
@@ -68,5 +68,5 @@ export default function Haxidraw({ stars }) {
         </Box>
       </Grid>
     </CardModel>
-  )
+  );
 }

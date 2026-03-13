@@ -1,9 +1,9 @@
 // @ts-nocheck
 /** @jsxImportSource theme-ui */
-import CardModel from './card-model'
-import { Box, Card, Flex, Grid, Heading, Image, Text } from 'theme-ui'
-import Buttons from './button'
-import { useTranslations } from 'next-intl'
+import CardModel from "./card-model";
+import { Box, Card, Flex, Grid, Heading, Image, Text } from "theme-ui";
+import Buttons from "./button";
+import { useTranslations } from "next-intl";
 
 const WorkshopCard = ({
   slug,
@@ -21,18 +21,18 @@ const WorkshopCard = ({
     target="_blank"
     rel="noopener"
     sx={{
-      color: 'text',
-      textDecoration: 'none',
+      color: "text",
+      textDecoration: "none",
       p: [0, 0],
       lineHeight: 0,
-      display: 'flex',
-      flexDirection: 'column',
-      maxWidth: '250px',
-      height: '250px'
+      display: "flex",
+      flexDirection: "column",
+      maxWidth: "250px",
+      height: "250px"
     }}
     {...props}
   >
-    <Box sx={{ p: 3, lineHeight: 'body' }}>
+    <Box sx={{ p: 3, lineHeight: "body" }}>
       <Heading as="h4" sx={{ my: 1 }}>
         {name}
       </Heading>
@@ -40,39 +40,39 @@ const WorkshopCard = ({
     </Box>
     <Box
       sx={{
-        width: '100%',
-        height: '100%'
+        width: "100%",
+        height: "100%"
       }}
     >
       <Image
         alt={`${name} demo`}
         src={img}
-        sx={{ width: '100%', height: 'auto' }}
+        sx={{ width: "100%", height: "auto" }}
       />
     </Box>
   </Card>
-)
+);
 
 export default function Workshops({ stars }) {
-  const translate = useTranslations("index.workshopscard")
+  const translate = useTranslations("index.workshopscard");
   return (
     <CardModel
       color="white"
       sx={{
-        backgroundColor: 'elevated',
+        backgroundColor: "elevated",
         background:
-          'linear-gradient(32deg, rgba(51, 142, 218, 0.9) 0%, rgba(51, 214, 166, 0.9) 100%)',
-        height: 'fit-content'
+          "linear-gradient(32deg, rgba(51, 142, 218, 0.9) 0%, rgba(51, 214, 166, 0.9) 100%)",
+        height: "fit-content"
       }}
       github_link="https://github.com/hackclub/workshops"
       stars={stars}
       highlight="blue"
     >
-      <Text variant="title" as="h3" sx={{ fontSize: ['36px', 4, 5] }}>
+      <Text variant="title" as="h3" sx={{ fontSize: ["36px", 4, 5] }}>
         {translate("title")}
       </Text>
-      <Grid columns={[1, 2, 2]} sx={{ gap: 4, height: 'fit-content' }}>
-        <Flex sx={{ flexDirection: 'column', height: 'fit-content' }}>
+      <Grid columns={[1, 2, 2]} sx={{ gap: 4, height: "fit-content" }}>
+        <Flex sx={{ flexDirection: "column", height: "fit-content" }}>
           <Text as="p" variant="subtitle">
             {translate("text")}
           </Text>
@@ -81,7 +81,7 @@ export default function Workshops({ stars }) {
             link="https://workshops.hackclub.com"
             icon="code"
             primary="white"
-            sx={{ color: 'blue', mt: [3, 3, 4] }}
+            sx={{ color: "blue", mt: [3, 3, 4] }}
           >
             {translate("browse")}
           </Buttons>
@@ -94,7 +94,7 @@ export default function Workshops({ stars }) {
             {translate("build")}
           </Buttons>
         </Flex>
-        <Grid sx={{ display: ['none', 'grid', 'grid'] }} columns={[1, 1, 1, 2]}>
+        <Grid sx={{ display: ["none", "grid", "grid"] }} columns={[1, 1, 1, 2]}>
           <WorkshopCard
             key="splatter_paint"
             slug="splatter_paint"
@@ -108,10 +108,10 @@ export default function Workshops({ stars }) {
             name={translate("particlephysics")}
             description={translate("particlephysicsdescription")}
             img="/home/workshops/particle_physics.png"
-            sx={{ display: ['none', 'none', 'none', 'flex'] }}
+            sx={{ display: ["none", "none", "none", "flex"] }}
           />
         </Grid>
       </Grid>
     </CardModel>
-  )
+  );
 }

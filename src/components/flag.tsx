@@ -34,7 +34,7 @@ const scrolled = (props) =>
   `;
 
 const Base = styled(Link, {
-  shouldForwardProp: (prop) => !["scrolled", "dark"].includes(prop),
+  shouldForwardProp: (prop) => !["scrolled", "dark"].includes(prop)
 })`
   background-image: url(https://assets.hackclub.com/flag-orpheus-top.svg);
   background-repeat: no-repeat;

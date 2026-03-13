@@ -1,7 +1,7 @@
 // @ts-nocheck
-import React from 'react'
-import Icon from '@hackclub/icons'
+import React from "react";
+import Icon from "@hackclub/icons";
 
 export default function IconComponent(props: any): React.ReactElement {
-  return <Icon {...props} />
+  return <Icon {...props} />;
 }

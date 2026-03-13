@@ -1,44 +1,44 @@
 // @ts-nocheck
 /** @jsxImportSource theme-ui */
-import CardModel from './card-model'
-import { Box, Flex, Grid, Image, Text } from 'theme-ui'
-import Buttons from './button'
-import { useTranslations } from 'next-intl'
+import CardModel from "./card-model";
+import { Box, Flex, Grid, Image, Text } from "theme-ui";
+import Buttons from "./button";
+import { useTranslations } from "next-intl";
 
 export default function Sinerider({ stars }) {
-  const translate = useTranslations("index.sineridercard")
+  const translate = useTranslations("index.sineridercard");
   return (
     <CardModel
       github_link="https://github.com/hackclub/sinerider/"
       stars={stars}
       color="white"
       sx={{
-        backgroundSize: 'cover',
-        backgroundColor: '#271932'
+        backgroundSize: "cover",
+        backgroundColor: "#271932"
       }}
-      position={[null, 'bottom', 'bottom']}
+      position={[null, "bottom", "bottom"]}
       highlight="#271932"
       image="/home/sinerider-bg.webp"
     >
       <Image
         src="https://cloud-9cei11221-hack-club-bot.vercel.app/0logo_text_2.png"
         sx={{
-          width: ['200px', '250px', '300px'],
-          mt: ['-10px', '-20px', '-20px'],
-          position: 'relative',
+          width: ["200px", "250px", "300px"],
+          mt: ["-10px", "-20px", "-20px"],
+          position: "relative",
           zIndex: 2,
-          fontSize: ['36px', 4, 5],
-          color: 'white'
+          fontSize: ["36px", 4, 5],
+          color: "white"
         }}
         alt="Sinerider"
       />
-      <Grid columns={[1, 1, 2]} sx={{ position: 'relative', zIndex: 2 }}>
+      <Grid columns={[1, 1, 2]} sx={{ position: "relative", zIndex: 2 }}>
         <Box></Box>
-        <Box sx={{ mt: ['-40px', '-40px', '-150px'] }}>
+        <Box sx={{ mt: ["-40px", "-40px", "-150px"] }}>
           <Text as="p" variant="subtitle">
             {translate("text")}
           </Text>
-          <Flex sx={{ flexDirection: 'column', mt: [3, 3, 4] }}>
+          <Flex sx={{ flexDirection: "column", mt: [3, 3, 4] }}>
             <Buttons
               icon="view"
               href="https://sinerider.com/"
@@ -46,7 +46,7 @@ export default function Sinerider({ stars }) {
               rel="noopener"
               primary="#CAB4D4"
               id="43"
-              sx={{ color: '#271932' }}
+              sx={{ color: "#271932" }}
             >
               {translate("playnow")}
             </Buttons>
@@ -63,5 +63,5 @@ export default function Sinerider({ stars }) {
         </Box>
       </Grid>
     </CardModel>
-  )
+  );
 }

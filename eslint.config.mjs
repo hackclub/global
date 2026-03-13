@@ -15,13 +15,13 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // ignore stuff ported from hackclub/site
     "src/components/**",
-    "src/lib/**",
+    "src/lib/**"
   ]),
   {
     rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-    },
-  },
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  }
 ]);
 
 export default eslintConfig;

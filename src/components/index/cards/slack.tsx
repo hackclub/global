@@ -18,7 +18,7 @@ const Cover = () => (
       backgroundImage:
         "linear-gradient(to bottom,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95))",
       opacity: 0.8,
-      zIndex: 1,
+      zIndex: 1
     }}
   />
 );
@@ -35,7 +35,7 @@ const Stats = ({ data, subheading, nonMobile = false }) => (
       sx={{
         color: "muted",
         fontSize: ["14px", "16px", "18px"],
-        fontWeight: "400",
+        fontWeight: "400"
       }}
       as="h5"
     >
@@ -44,7 +44,7 @@ const Stats = ({ data, subheading, nonMobile = false }) => (
   </Box>
 );
 export default function Slack({ data, events }) {
-  const translate = useTranslations("index.slackcard")
+  const translate = useTranslations("index.slackcard");
   return (
     <CardModel
       color="white"
@@ -53,7 +53,7 @@ export default function Slack({ data, events }) {
         overflow: "hidden",
         backgroundImage: (t) => t.util.gx("cyan", "purple"),
         minHeight: ["500px", "400px"],
-        py: [3, 3, 4],
+        py: [3, 3, 4]
       }}
     >
       <Image
@@ -64,7 +64,7 @@ export default function Slack({ data, events }) {
           width: "100%",
           height: "100%",
           ml: ["-24px", "-32px", "-32px", "-32px"],
-          mt: ["-24px", "-32px", "-32px", "-32px"],
+          mt: ["-24px", "-32px", "-32px", "-32px"]
         }}
         alt="Slack AMA"
       />
@@ -76,7 +76,7 @@ export default function Slack({ data, events }) {
           sx={{
             fontSize: ["36px", 4, 5],
             zIndex: 2,
-            maxWidth: [null, null, "70%", null],
+            maxWidth: [null, null, "70%", null]
           }}
         >
           {translate("onlinecommunity")}
@@ -85,7 +85,7 @@ export default function Slack({ data, events }) {
       <Grid columns={[1, 1, "1.6fr 1fr", "1.6fr 1fr"]} sx={{ zIndex: 2 }}>
         <Box
           sx={{
-            zIndex: 2,
+            zIndex: 2
           }}
         >
           <Text
@@ -114,7 +114,7 @@ export default function Slack({ data, events }) {
           <Grid
             sx={{
               zIndex: 2,
-              display: data?.chats_channels_count_1d > 0 ? "block" : "none",
+              display: data?.chats_channels_count_1d > 0 ? "block" : "none"
             }}
           >
             <Box
@@ -130,7 +130,7 @@ export default function Slack({ data, events }) {
                 ml: ["-10%", "-10%", "-5%"],
                 mb: ["-10%", "-10%", "-5%"],
                 p: 4,
-                py: [3, 3, 2],
+                py: [3, 3, 2]
               }}
             >
               <Flex
@@ -138,7 +138,7 @@ export default function Slack({ data, events }) {
                   flexDirection: ["row", "row", "column"],
                   justifyContent: "space-between",
                   flexWrap: "wrap",
-                  textAlign: "center",
+                  textAlign: "center"
                 }}
               >
                 <Stats

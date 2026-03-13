@@ -1,5 +1,5 @@
-import { Box } from 'theme-ui'
-import Image, { StaticImageData } from "next/image"
+import { Box } from "theme-ui";
+import Image, { StaticImageData } from "next/image";
 
 /*
  * Use this component inside a container with CSS:
@@ -9,31 +9,31 @@ import Image, { StaticImageData } from "next/image"
  */
 
 type BGImgProps = {
-  gradient?: string | boolean
-  alt?: string
-  src: string | StaticImageData
-  placeholder?: 'blur' | 'empty'
-}
+  gradient?: string | boolean;
+  alt?: string;
+  src: string | StaticImageData;
+  placeholder?: "blur" | "empty";
+};
 
 export default function BGImg({
-  gradient = 'linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.5))',
-  alt = '',
+  gradient = "linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.5))",
+  alt = "",
   ...props
 }: BGImgProps) {
   return (
     <Box
       sx={{
-        position: 'absolute',
-        display: 'block',
+        position: "absolute",
+        display: "block",
         top: 0,
         left: 0,
         right: 0,
         bottom: 0,
         zIndex: 0,
-        '&:after': {
+        "&:after": {
           content: '""',
-          position: 'absolute',
-          ...(typeof gradient === 'string'
+          position: "absolute",
+          ...(typeof gradient === "string"
             ? { backgroundImage: gradient }
             : {}),
           top: 0,
@@ -41,14 +41,11 @@ export default function BGImg({
           right: 0,
           bottom: 0
         },
-        img: { objectFit: 'cover', objectPosition: 'center center' },
-        '~ *': { position: 'relative' }
+        img: { objectFit: "cover", objectPosition: "center center" },
+        "~ *": { position: "relative" }
       }}
     >
-      <Image
-        fill
-        alt={alt}
-        {...props} />
+      <Image fill alt={alt} {...props} />
     </Box>
   );
 }

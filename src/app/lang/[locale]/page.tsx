@@ -11,7 +11,7 @@ const repos = [
   "sinerider",
   "hackclub",
   "hackathons",
-  "onboard",
+  "onboard"
 ] as const;
 const starsPromise = Promise.all(
   repos.map((repo) =>
@@ -20,7 +20,7 @@ const starsPromise = Promise.all(
       // it has the cool in the end cause its cool and cause i think gh/github desktop uses the same env var which has caused me issues
       headers: process.env.GITHUB_TOKEN_COOL
         ? { Authorization: `token ${process.env.GITHUB_TOKEN_COOL}` }
-        : undefined,
+        : undefined
     })
       .then((r) => r.json())
       .then((d) => {
@@ -31,23 +31,23 @@ const starsPromise = Promise.all(
       .catch((err) => {
         console.error(`[stars] ${repo} failed:`, err);
         return [repo, 0] as const;
-      }),
-  ),
+      })
+  )
 ).then(
   (entries) =>
     Object.fromEntries(
-      entries.map(([repo, count]) => [repo, { stargazerCount: count }]),
-    ) as Stars,
+      entries.map(([repo, count]) => [repo, { stargazerCount: count }])
+    ) as Stars
 );
 
 const hackathonsDataPromise = fetch(
-  "https://hackathons.hackclub.com/api/events/upcoming",
+  "https://hackathons.hackclub.com/api/events/upcoming"
 )
   .then((r) => (r.ok ? r.json() : []))
   .then((data: { start: string }[]) =>
     data.sort(
-      (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime(),
-    ),
+      (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
+    )
   )
   .catch((err) => {
     console.error("[hackathons] failed:", err);
@@ -83,8 +83,8 @@ const bankDataPromise = fetch("https://hcb.hackclub.com/stats")
     return [
       `💰 ${(bd.raised / 100).toLocaleString("en-US", {
         style: "currency",
-        currency: "USD",
-      })} raised`,
+        currency: "USD"
+      })} raised`
     ] as string[];
   })
   .catch((err) => {
@@ -92,30 +92,28 @@ const bankDataPromise = fetch("https://hcb.hackclub.com/stats")
     return ["error"] as string[];
   });
 
-const locales = [
-  "en",
-];
+const locales = ["en"];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
-  params,
+  params
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'index' });
+  const t = await getTranslations({ locale, namespace: "index" });
 
   return {
     title: "Hack Club",
-    description: t('firstsection.everydaytext'),
+    description: t("firstsection.everydaytext"),
     openGraph: {
       images: [
-        "https://user-cdn.hackclub-assets.com/019c5a96-4c13-7a10-bbb6-6914f1130df8/assemble.jpg",
-      ],
-    },
+        "https://user-cdn.hackclub-assets.com/019c5a96-4c13-7a10-bbb6-6914f1130df8/assemble.jpg"
+      ]
+    }
   };
 }
 
@@ -124,7 +122,7 @@ export default async function Page() {
     slackDataPromise,
     bankDataPromise,
     starsPromise,
-    hackathonsDataPromise,
+    hackathonsDataPromise
   ]);
 
   return (

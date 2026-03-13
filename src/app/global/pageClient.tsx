@@ -5,7 +5,7 @@ import NextLink from "next/link";
 
 export default function GlobalPageClient() {
   const sortedLocales = [...(locales as string[])].sort((a, b) =>
-    a.localeCompare(b),
+    a.localeCompare(b)
   );
 
   return (
@@ -19,7 +19,7 @@ export default function GlobalPageClient() {
         minHeight: "100vh",
         width: "100%",
         alignItems: "flex-start",
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "#f0f0f0"
       }}
     >
       {sortedLocales.map((locale) => {
@@ -33,7 +33,7 @@ export default function GlobalPageClient() {
               textDecoration: "none",
               display: "flex",
               alignItems: "center",
-              gap: "0.5rem",
+              gap: "0.5rem"
             }}
           >
             <NextLink href={`/lang/${locale}`} passHref>
