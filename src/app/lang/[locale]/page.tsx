@@ -2,6 +2,7 @@ import LocalePageClient from "./LocalePageClient";
 import type { Metadata } from "next";
 import { slackData as fetchSlackData } from "@/lib/slackData";
 import type { Stars } from "./LocalePage";
+import { getTranslations } from "next-intl/server";
 
 const repos = [
   // assumes hackclub/ is the org for all repos
@@ -104,9 +105,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'index' });
+
   return {
-    title: "test",
-    description: "description",
+    title: "Hack Club",
+    description: t('firstsection.everydaytext'),
     openGraph: {
       images: [
         "https://user-cdn.hackclub-assets.com/019c5a96-4c13-7a10-bbb6-6914f1130df8/assemble.jpg",

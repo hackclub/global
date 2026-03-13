@@ -28,7 +28,6 @@ import Hackathons from "@/components/index/cards/hackathons";
 import Secret from "@/components/secret";
 import Slack from "@/components/index/cards/slack";
 import Icon from "@/components/icon";
-import GitHub from "@/components/index/github";
 import Photo from "@/components/photo";
 import Comma from "@/components/comma";
 import Haxidraw from "@/components/index/cards/haxidraw";
@@ -87,12 +86,11 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
 
   const translate = useTranslations("index");
 
-  const [searchParams, setSearchParams] = useState<URLSearchParams | null>(
-    null,
+  const [searchParams] = useState<URLSearchParams | null>(() =>
+    typeof window !== "undefined"
+      ? new URLSearchParams(window.location.search)
+      : null,
   );
-  useEffect(() => {
-    setSearchParams(new URLSearchParams(window.location.search));
-  }, []);
 
   useEffect(() => {
     if (reveal && !hover) {
@@ -124,9 +122,6 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
     console.log(
       `White sheets of paper\nWaiting to be printed on\nA blank console waits`,
     );
-    if (count === images.length - 1) {
-      setCount(0);
-    }
   }, [count, images.length]);
 
   // Spotlight effect
@@ -172,7 +167,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
           }}
         />
         {konamiActivated && (
-          <Text as="p">Hey, I'm an Easter Egg! Look at me!</Text>
+          <Text as="p">Hey, I&apos;m an Easter Egg! Look at me!</Text>
         )}
         <Box
           as="header"
@@ -237,9 +232,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   }}
                 >
                   <Text
-                    onClick={() => {
-                      !reveal ? setReveal(true) : setReveal(false);
-                    }}
+                    onClick={() => setReveal(!reveal)}
                     sx={{
                       px: 2,
                       backgroundColor: "red",
@@ -411,7 +404,7 @@ function Page({ bankData, slackData, stars, hackathonsData, game }: PageProps) {
                   py: [3, 3, 3, 0],
                 }}
                 onClick={() => {
-                  setCount(count + 1);
+                  setCount(count === images.length - 1 ? 0 : count + 1);
                 }}
               >
                 <Box

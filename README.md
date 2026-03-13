@@ -1,7 +1,7 @@
 <p align="center"><img width="192" alt="Hack Club logo" src="https://assets.hackclub.com/flag-orpheus-top.svg"></p>
 <h1 align="center">Hack Club Global</h1>
 
-Localized & minimalized version of [hackclub.com](https://hackclub.com).
+Localized & minimalized version of [hackclub.com](https://hackclub.com)'s home page.
 
 ---
 
@@ -12,7 +12,7 @@ Localized & minimalized version of [hackclub.com](https://hackclub.com).
 1. Download the code to your computer:
 
    ```bash
-   git clone https://github.com/hackclub/global && cd site
+   git clone https://github.com/hackclub/global && cd global
    ```
 
 2. Install dependencies:
@@ -45,3 +45,9 @@ Localized & minimalized version of [hackclub.com](https://hackclub.com).
        type: CNAME
        value: cname.vercel-dns.com.
    ```
+
+4. Once the DNS PR is merged, submit a PR to this repository with your locale/changes! Locales.json is generated automatically, so you don't need to worry about that.
+
+## License
+
+Code under MIT License, assets may not be re-used or re-distributed.

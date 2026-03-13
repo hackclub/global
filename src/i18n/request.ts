@@ -17,11 +17,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
   };
 });
 
-function deepMerge(base: any, override: any): any {
+function deepMerge(base: Record<string, unknown>, override: Record<string, unknown>): Record<string, unknown> {
   const result = { ...base };
   for (const key in override) {
-    if (typeof override[key] === 'object' && !Array.isArray(override[key])) {
-      result[key] = deepMerge(base[key] ?? {}, override[key]);
+    if (typeof override[key] === 'object' && !Array.isArray(override[key]) && override[key] !== null) {
+      result[key] = deepMerge((base[key] ?? {}) as Record<string, unknown>, override[key] as Record<string, unknown>);
     } else {
       result[key] = override[key];
     }

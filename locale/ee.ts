@@ -1,6 +1,8 @@
 // docs:
 // - \u00A0 used for non-breaking spaces in "Hack Club", "Hack Clubbers", similar occurences.
 
+import replaceNbsp from "@/libs/replaceNbsp";
+
 const messages = {
   index: {
     navbar: {
@@ -194,15 +196,6 @@ const messages = {
 };
 
 // for safety, replace nbsp with \u00A0 in the strings
-const replaceNbsp = (obj: any) => {
-  for (const key in obj) {
-    if (typeof obj[key] === "string") {
-      obj[key] = obj[key].replace(/&nbsp;/g, "\u00A0");
-    } else if (typeof obj[key] === "object" && obj[key] !== null) {
-      replaceNbsp(obj[key]);
-    }
-  }
-};
 replaceNbsp(messages);
 
 export default messages;

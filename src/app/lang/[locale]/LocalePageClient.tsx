@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import type { SlackData, PageProps } from "./LocalePage";
+import type { PageProps } from "./LocalePage";
 
 export type { PageProps };
 
