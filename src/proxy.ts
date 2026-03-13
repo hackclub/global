@@ -27,9 +27,9 @@ export default function proxy(request: NextRequest) {
 
   const url = request.nextUrl.clone();
   url.pathname = `/lang/${locale}`;
-  const headers = new Headers(request.headers);
-  headers.set("x-next-intl-locale", locale);
-  return NextResponse.rewrite(url, { headers });
+  const response = NextResponse.rewrite(url);
+  response.headers.set("x-next-intl-locale", locale);
+  return response;
 }
 
 export const config = {
