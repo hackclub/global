@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center"><img width="192" alt="Hack Club logo" src="https://assets.hackclub.com/flag-orpheus-top.svg"></p>
+<h1 align="center">Hack Club Global</h1>
 
-## Getting Started
+Localized & minimalized version of [hackclub.com](https://hackclub.com).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Contributing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Download the code to your computer:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   git clone https://github.com/hackclub/global && cd site
+   ```
 
-## Learn More
+2. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   bun install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Start running the website on your computer:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   bun run dev
+   ```
 
-## Deploy on Vercel
+4. Open up your web browser and go to [localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. To test your locale, go to `localhost:3000/[xx]`, replacing `[xx]` with the locale code (e.g. `ee` for Estonian).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Adding a Locale
+
+1. Create a new file in the `locale/` directory with the locale code as the filename (e.g. `fr.ts` for French). Follow the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) standard for locale codes.
+
+2. Test your changes!
+
+3. Submit a PR to [`hackclub/dns`](https://github.com/hackclub/dns) to add your `.hackclub.com` subdomain. Add a record to `hackclub.com.yaml` in the following format:
+
+   ```yaml
+   xx.hackclub.com:
+     - ttl: 300
+       type: CNAME
+       value: cname.vercel-dns.com.
+   ```

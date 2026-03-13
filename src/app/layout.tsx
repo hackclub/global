@@ -2,7 +2,6 @@ import type { Viewport } from "next";
 import "@hackclub/theme/fonts/reg-bold.css";
 import Providers from "./providers";
 import EmotionRegistry from "./emotion-registry";
-import GitHub from "../components/GitHub";
 import { NextIntlClientProvider } from "next-intl";
 
 export const viewport: Viewport = {
@@ -15,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <body suppressHydrationWarning>
         <NextIntlClientProvider>
           <EmotionRegistry>
