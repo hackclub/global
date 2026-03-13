@@ -33,7 +33,7 @@ Localized & minimalized version of [hackclub.com](https://hackclub.com)'s home p
 
 ### Adding a Locale
 
-1. Create a new file in the `locale/` directory with the locale code as the filename (e.g. `fr.ts` for French). Follow the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) standard for locale codes.
+1. Go to the `locale/` directory, copy `en.ts` and rename it to your locale code (e.g. `fr.ts` for French). Follow the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) standard for locale codes.
 
 2. Test your changes!
 
