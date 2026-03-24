@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
-import locales from "./src/generated/locales.json" assert { type: "json" };
+import locales from "./src/generated/locales.json" with { type: "json" };
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
