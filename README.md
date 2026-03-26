@@ -43,7 +43,7 @@ Localized & minimalized version of [hackclub.com](https://hackclub.com)'s home p
    xx.hackclub.com:
      - ttl: 300
        type: CNAME
-       value: cname.vercel-dns.com.
+       value: a05569dabb46ea5b.vercel-dns-016.com.
    ```
 
 4. Once the DNS PR is merged, submit a PR to this repository with your locale/changes! Locales.json is generated automatically, so you don't need to worry about that.
