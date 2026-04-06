@@ -20,7 +20,7 @@ const messages = {
       teenhackers: "jeunes hackers",
       aroundtheworld: "du monde entier qui codent ensemble.",
       outernetpic: "Hackers à Outernet dans le Vermont",
-      outernetpictitle: "📸 Photo de Matt Gleich, Hack Clubber in NH!"
+      outernetpictitle: "📸 Photo de Matt Gleich, Hack Clubber au NH!"
     },
     headerbuttons: {
       slack: "Rejoindre Slack",
@@ -48,7 +48,7 @@ const messages = {
         text1: `Nous construisons ensemble de grands projets open source (`,
         linktext: "3k+\u00A0PRs par ans",
         text2:
-          ") comme ce site web, un moteur de jeu, système streak quotidien, et plus encore !"
+          ") comme ce site web, un moteur de jeu, système de streak quotidien, et plus encore !"
       },
       step3: {
         title: "Rassemblez-vous en personne avec d'autres créateurs",
@@ -56,7 +56,7 @@ const messages = {
           "Rencontrez d'autres Hack\u00A0Clubbers de votre communauté pour créer ensemble dans l'un des 1000+",
         hackclubslink: "Hack\u00A0Clubs",
         and: "et",
-        hackathonslink: "Hackatons Lycéens",
+        hackathonslink: "Hackathons Lycéens",
         dot: "."
       }
     },
@@ -72,7 +72,7 @@ const messages = {
       onlinecommunity: "Notre communauté en ligne",
       text1: `Coder n'a pas besoin d'être une activité solitaire. A Hack&nbsp;Club, nous créons des choses remarquables ensemble, et sur notre Slack vous trouverez aussi des personnes formidables avec qui traîner. Coder ensemble, trouvez votre communauté de programmeurs, imaginez quelque chose de fou, ou rejoignez simplement le #lounge.`,
       text2: `Nous invitons parfois quelqu'un que nous souhaitons vraiment rencontrer (comme Sal Khan, George Hotz et Lady Ada) et organisons un`,
-      ama: "AMA",
+      ama: "FAQ",
       withthem: "avec eux.",
       joinslack: " Rejoindre le Slack",
       currentlyonline: "Actuellement en ligne",
@@ -84,8 +84,8 @@ const messages = {
       webuild: "Nous construisons des jeux et outils",
       opensource: "open source",
       gamestools: "ensemble",
-          text: `En collaboration avec les ingénieurs de l’équipe Hack&nbsp;Club,
-            les Hack Clubbers créent des outils d’apprentissage les uns pour les autres.
+          text: `En collaboration avec les ingénieurs de l’équipe Hack\u00A0Club,
+            les Hack\u00A0Clubbers créent des outils d’apprentissage les uns pour les autres.
             Participez à ces projets en créant quelque chose avec nos outils,
             ou contribuez directement à l’amélioration des outils eux-mêmes.`
     },
@@ -139,11 +139,11 @@ const messages = {
     irlcommunity: {
       findyour: "Trouve ta",
       community: "communauté IRL.",
-      text: `Des milliers de Hack Clubbers organisent et participent à des hackathons et des clubs de codage après l’école.`
+      text: `Des milliers de Hack\u00A0Clubbers organisent et participent à des hackathons et des clubs de codage après l’école.`
     },
     clubscard: {
       title: "Un réseau de plus de 1000 clubs de code",
-      text1: `Rejoins ou lance un Hack&nbsp;Club et fais partie d’un réseau de
+      text1: `Rejoins ou lance un Hack\u00A0Club et fais partie d’un réseau de
               clubs de code de grande qualité, où tu apprends à coder
               entièrement en construisant des projets.`,
       text2:
@@ -161,9 +161,9 @@ const messages = {
     },
     hcbcard: {
       // it's HCB, not hack club bank
-      text: "Devenez une association à but non lucratif 501(c)3 et rejoignez plus de 700 équipes qui utilisent HCB pour organiser des événements de classe mondiale.",
+      text: "Devenez une association à but non lucratif et rejoignez plus de 700 équipes qui utilisent HCB pour organiser des événements de classe mondiale.",
       text2:
-        "Cette plateforme est construite et maintenue par l’équipe Hack&nbsp;Club.",
+        "Cette plateforme est construite et maintenue par l’équipe Hack\u00A0Clubs.",
       startfundraising: "Commencer la levée de fonds !"
     },
     recap: {
@@ -185,7 +185,7 @@ const messages = {
       team: "Notre équipe et conseil",
       jobs: "Emplois",
       brand: "Guide de marque",
-      press: "Demandes presse",
+      press: "Demandes de presse",
       philanthropy: "Faire un don",
       community: "Événements communautaires",
       jams: "Jams",
