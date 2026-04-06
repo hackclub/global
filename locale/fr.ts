@@ -28,40 +28,39 @@ const messages = {
       mainsitesubtext: "avec plus d'informations!"
     },
     firstsection: {
-      discoverthe: "Discover the",
-      joyofcode: "joy of code",
-      together: ", together.",
-      everydaytext: `Every day, thousands of Hack\u00A0Clubbers gather online and
-      in-person to make things with code. Whether you're a beginner
-      programmer or have years of experience, there's a place for you at
-      Hack\u00A0Club. Read about our `,
-      hackerethic: "hacker ethic"
+    discoverthe: "Découvrez la",
+    joyofcode: "joie du code",
+    together: ", ensemble.",
+    everydaytext: `Chaque jour, des milliers de Hack\u00A0Clubbers se retrouvent en ligne et
+    en personne pour créer des choses avec du code. Que vous soyez
+    débutant ou que vous ayez des années d'expérience, il y a une place
+    pour vous chez Hack\u00A0Club. Découvrez notre `,
+    hackerethic: "éthique hacker"
     },
     steps: {
       step1: {
-        title: "Connect with other teenage coders",
-        text1: `Have a coding question? Looking for project feedback? You'll
-                find hundreds of fabulous people to talk to in our global`,
-        text2: "(like Discord), active at all hours."
+        title: "Connectez-vous avec d'autres jeunes codeurs",
+        text1: `Vous avez une question sur le code ? Vous cherchez des retours sur votre projet ? Tu vas trouver des centaines de personnes avec qui parler dans notre`,
+        text2: "(comme Discord), actif toutes les heures."
       },
       step2: {
-        title: "Build open source learning tools",
-        text1: `We build large open source projects together (`,
-        linktext: "3k+\u00A0PRs a year",
+        title: "Créer des outils d'apprentissage open source",
+        text1: `Nous construisons ensemble de grands projets open source (`,
+        linktext: "3k+\u00A0PRs par ans",
         text2:
-          ") like this website, a game engine, daily streak system, and more!"
+          ") comme ce site web, un moteur de jeu, système streak quotidien, et plus encore !"
       },
       step3: {
-        title: "Gather IRL with other makers",
+        title: "Rassemblez-vous en personne avec d'autres créateurs",
         text1:
-          "Meet other Hack\u00A0Clubbers in your community to build together at one of the 1000+",
+          "Rencontrez d'autres Hack\u00A0Clubbers de votre communauté pour créer ensemble dans l'un des 1000+",
         hackclubslink: "Hack\u00A0Clubs",
-        and: "and",
-        hackathonslink: "high school hackathons",
+        and: "et",
+        hackathonslink: "Hackatons Lycéens",
         dot: "."
       }
     },
-    carouseltext: "Here are a few projects you could get involved in:",
+    carouseltext: "Voici quelques projets auxquels vous pourriez participer:",
     connectwithbuilders: {
       connectwith: "Connect with",
       builders: "builders",
