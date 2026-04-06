@@ -90,50 +90,51 @@ const messages = {
             ou contribuez directement à l’amélioration des outils eux-mêmes.`
     },
     sprigcard: {
-      text: `Draw, make music, and craft games in our web-based JavaScript game
-            editor, which has been used by 7k+ makers around the world.`,
+      text: `Dessinez, faites de la musique et créez des jeux dans notre éditeur de jeu JavaScript basé sur le web, qui a été utilisé par plus de 7k fabricants à travers le monde.`,
       button1content: "Click here to get started in our editor",
-      buildasprig: "Build a Sprig game",
-      reviewgames: "Review games / build the engine",
-      connect: "Connect with other game devs",
-      newfrom: "New from",
-      thegallery: "the gallery"
+      buildasprig: "Créer un jeu Spring",
+      reviewgames: "Revoir les jeux / construire le moteur",
+      connect: "Connectez-vous avec d'autres développeurs de jeux",
+      newfrom: "Nouveautés de",
+      thegallery: "la galerie"
     },
     blotcard: {
-      text: `Blot is an open source drawing machine and online editor, designed
-             to be a fun and beginner friendly introduction to digital
-             fabrication and generative art.`,
-      learnmore: "Learn more",
-      createsomething: "Create something in the editor",
-      sharecreations: "Share your creations and chat on Slack"
+          text: `Blot est une machine à dessiner open source et un éditeur en ligne,
+            conçus comme une introduction ludique et accessible aux débutants
+            à la fabrication numérique et à l’art génératif.`,
+          learnmore: "En savoir plus",
+          createsomething: "Créez quelque chose dans l’éditeur",
+          sharecreations: "Partagez vos créations et discutez sur Slack"
     },
     sineridercard: {
-      text: `SineRider is a game about love and graphing, powered by teenage
-             hackers of all kinds: artists, musicians, programmers, storytellers…
-             so if that’s you, come join us! We can always use help keeping
-             everything up to date and running smoothly.`,
-      playnow: "Play now",
-      jointhedevelopment: "Join the development"
+          text: `SineRider est un jeu autour de l’amour et des graphiques, porté par
+            des hackers ados de tous horizons : artistes, musiciens,
+            programmeurs, conteurs… Si ça te ressemble, rejoins-nous !
+            On a toujours besoin d’aide pour garder le projet à jour
+            et le faire tourner au mieux.`,
+          playnow: "Jouer maintenant",
+          jointhedevelopment: "Rejoindre le développement"
     },
     sprigconsolecard: {
-      text: `Play your own Sprig games on this console, which you can assemble
-             and disassemble. Each kit includes parts needed for getting
-             started with hardware engineering and embedded systems
-             programming.`,
-      buildagame: "Build a game and get your console"
+          text: `Jouez à vos propres jeux Sprig sur cette console, que vous pouvez
+            assembler et démonter. Chaque kit inclut les pièces nécessaires
+            pour débuter en ingénierie matérielle et en programmation
+            de systèmes embarqués.`,
+          buildagame: "Créez un jeu et recevez votre console"
     },
     workshopscard: {
-      title: "Workshops",
-      text: `100+ community-contributed, self-guided coding tutorials and ideas.
-             Learn to code by building, one project at a time.`,
-      browse: "Browse The Workshops",
-      build: "Build A Workshop",
-      splatterpaint: "Splatter Paint",
+      title: "Ateliers",
+      text: `Plus de 100 tutoriels et idées de code créés par la communauté,
+             à suivre en autonomie. Apprenez à coder en construisant,
+             un projet à la fois.`,
+      browse: "Parcourir les ateliers",
+      build: "Créer un atelier",
+      splatterpaint: "Peinture éclaboussée",
       splatterpaintdescription:
-        "Crazy colorful splatter paint in your browser with Paper.js",
-      particlephysics: "Particle Physics",
+        "Des éclaboussures de peinture folles et colorées dans ton navigateur avec Paper.js",
+      particlephysics: "Physique des particules",
       particlephysicsdescription:
-        "Create a particle physics simulation and with p5.js"
+        "Créez une simulation de physique des particules avec p5.js"
     },
     irlcommunity: {
       findyour: "Find your",
