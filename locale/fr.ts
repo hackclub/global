@@ -137,67 +137,64 @@ const messages = {
         "Créez une simulation de physique des particules avec p5.js"
     },
     irlcommunity: {
-      findyour: "Find your",
-      community: "IRL community.",
-      text: `Thousands of Hack Clubbers organize and participate in
-             hackathons and after school coding clubs.`
+      findyour: "Trouve ta",
+      community: "communauté IRL.",
+      text: `Des milliers de Hack Clubbers organisent et participent à des hackathons et des clubs de codage après l’école.`
     },
     clubscard: {
-      title: "A Network of 1000+ Coding Clubs",
-      text1: `Join or start a Hack&nbsp;Club and be part of a network of high
-              quality coding clubs where you learn to code entirely through
-              building things.`,
+      title: "Un réseau de plus de 1000 clubs de code",
+      text1: `Rejoins ou lance un Hack&nbsp;Club et fais partie d’un réseau de
+              clubs de code de grande qualité, où tu apprends à coder
+              entièrement en construisant des projets.`,
       text2:
-        "You can start with no experience and build and ship a project every meeting.",
+        "Tu peux commencer sans expérience et concevoir puis publier un projet à chaque réunion.",
       buttoncontent:
-        "we'll support you with meeting content, stickers, and more",
-      startaclub: "Start a club"
+        "on te soutiendra avec du contenu de réunion, des stickers et plus encore",
+      startaclub: "Lancer un club"
     },
     hackathonscard: {
-      title: "High School Hackathons",
-      text: `We support the largest network of high school hackathons in the
-             world. From an online community of organizers to free stickers and
-             more!`,
-      attend: "Attend a hackathon",
-      organizer: "Organizer? Learn more.",
-      upcoming: "Upcoming Hackathons"
+      title: "Hackathons lycéens",
+      text: `Nous soutenons le plus grand réseau de hackathons pour les lycéens au monde. D'une communauté en ligne d'organisateurs à des autocollants gratuits et plus encore !`,
+      attend: "Assistez à un hackathon",
+      organizer: "Oganisateur ? En savoir plus.",
+      upcoming: "Hackathons à venir"
     },
     hcbcard: {
       // it's HCB, not hack club bank
-      text: "Become a 501(c)3 nonprofit and join 700+ teams using HCB to run world-class events.",
+      text: "Devenez une association à but non lucratif 501(c)3 et rejoignez plus de 700 équipes qui utilisent HCB pour organiser des événements de classe mondiale.",
       text2:
-        "This platform is built and maintained by the Hack&nbsp;Club team.",
-      startfundraising: "Start fundraising!"
+        "Cette plateforme est construite et maintenue par l’équipe Hack&nbsp;Club.",
+      startfundraising: "Commencer la levée de fonds !"
     },
     recap: {
-      title: "We've got a lot going on - Let's recap",
-      secondhome: "Find your second home at",
+      title: "NOUS AVONS BEAUCOUP À FAIRE - RÉCAPITULONS",
+      secondhome: "Trouvez votre deuxième maison à",
       hackclub: "Hack\u00A0Club",
-      joinourslack: "Join our Slack",
+      joinourslack: "Rejoindre notre Slack",
       slacktext:
-        "Connect with other technical teenagers on Slack and hack on things together.",
-      opensource: "Explore Our Open Source Tools",
+        "Connectez-vous avec d’autres adolescents techniques sur Slack et travaillez ensemble.",
+      opensource: "Explorer nos outils open source",
       opentext:
-        "We're currently building a game engine, daily streak system, graphing game, and more!",
-      startaclub: "Start A Club",
+        "Nous construisons actuellement un moteur de jeu, un système de séries quotidiennes, un jeu de graphiques, et plus encore !",
+      startaclub: "Lancer un club",
       clubtext:
-        "Build an in-person community of high school hackers, and we're here to help."
+        "Construire une communauté en personne de hackers lycéens, et nous sommes là pour aider."
     },
     footer: {
-      philosophy: "Philosophy",
-      team: "Our Team & Board",
-      jobs: "Jobs",
-      brand: "Brand Guide",
-      press: "Press Inquiries",
-      philanthropy: "Donate",
-      community: "Community Events",
+      philosophy: "Philosophie",
+      team: "Notre équipe et conseil",
+      jobs: "Emplois",
+      brand: "Guide de marque",
+      press: "Demandes presse",
+      philanthropy: "Faire un don",
+      community: "Événements communautaires",
       jams: "Jams",
-      toolbox: "Toolbox",
-      clubsmap: "Clubs Map",
-      codeofconduct: "Code of Conduct",
-      privacy: "Privacy & Terms",
-      calltollfree: "(call toll-free)",
-      nonprofit: "nonprofit"
+      toolbox: "Boîte à outils",
+      clubsmap: "Carte des clubs",
+      codeofconduct: "Code de conduite",
+      privacy: "Confidentialité et conditions",
+      calltollfree: "(appel gratuit)",
+      nonprofit: "association à but non lucratif"
     }
   }
 };
