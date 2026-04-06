@@ -62,27 +62,23 @@ const messages = {
     },
     carouseltext: "Voici quelques projets auxquels vous pourriez participer:",
     connectwithbuilders: {
-      connectwith: "Connect with",
-      builders: "builders",
-      aroundworld: "from around the world",
+      connectwith: "Connectez-vous avec des",
+      builders: "créateurs",
+      aroundworld: "du monde entier",
       onlineinperson:
-        "We gather both online and in-person to share our love of code and make things together!"
+        "Nous nous retrouvons en ligne et en présentiel pour partager notre passion du code et créer des choses ensemble !"
     },
     slackcard: {
-      onlinecommunity: "Our Online Community",
-      text1: `Coding doesn't have to be a solitary activity. At Hack&nbsp;Club, we
-              make remarkable things together, and in our Slack you'll find
-              awesome people to hang out with too. Code together, find your
-              programming community, dream up something wild, or just #lounge.`,
-      text2: `Occasionally we invite someone we really want to speak to (like Sal
-                  Khan, George Hotz, and Lady Ada) and host an`,
+      onlinecommunity: "Notre communauté en ligne",
+      text1: `Coder n'a pas besoin d'être une activité solitaire. A Hack&nbsp;Club, nous créons des choses remarquables ensemble, et sur notre Slack vous trouverez aussi des personnes formidables avec qui traîner. Coder ensemble, trouvez votre communauté de programmeurs, imaginez quelque chose de fou, ou rejoignez simplement le #lounge.`,
+      text2: `Nous invitons parfois quelqu'un que nous souhaitons vraiment rencontrer (comme Sal Khan, George Hotz et Lady Ada) et organisons un`,
       ama: "AMA",
-      withthem: "with them.",
-      joinslack: "Join our Slack",
-      currentlyonline: "Currently online",
-      totalchannels: "Total Channels",
-      dailymessages: "Daily Messages",
-      totalmembers: "Total Members"
+      withthem: "avec eux.",
+      joinslack: " Rejoindre le Slack",
+      currentlyonline: "Actuellement en ligne",
+      totalchannels: "Salons au total",
+      dailymessages: "Messages quotidiens",
+      totalmembers: "Membres au total"
     },
     webuild: {
       webuild: "We Build",
