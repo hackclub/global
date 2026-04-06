@@ -10,8 +10,8 @@ const messages = {
       fiscalsponsorship: "Parrainage fiscal",
       hackathons: "Hackathons",
       join: "Rejoindre",
-      toolbox: "Toolbox",
-      donors: "Donors"
+      toolbox: "Boîte à outils",
+      donors: "Donateurs"
     },
     welcome: `Bienvenue chez Hack\u00A0Club`,
     header: {
@@ -81,13 +81,13 @@ const messages = {
       totalmembers: "Membres au total"
     },
     webuild: {
-      webuild: "We Build",
+      webuild: "Nous construisons des jeux et outils",
       opensource: "open source",
-      gamestools: "games and tools together",
-      text: `In collaboration with engineers on the Hack&nbsp;Club team,
-             Hack Clubbers build learning tools for each other. Get
-             involved with these projects by building something with our
-             tools or contribute to the tools themselves.`
+      gamestools: "ensemble",
+          text: `En collaboration avec les ingénieurs de l’équipe Hack&nbsp;Club,
+            les Hack Clubbers créent des outils d’apprentissage les uns pour les autres.
+            Participez à ces projets en créant quelque chose avec nos outils,
+            ou contribuez directement à l’amélioration des outils eux-mêmes.`
     },
     sprigcard: {
       text: `Draw, make music, and craft games in our web-based JavaScript game
