@@ -44,7 +44,7 @@
     "eslint": "9",
     "eslint-config-next": "^16.1.6",
     "prettier": "^3.8.1",
-    "typescript": "^6.0.2"
+    "typescript": "^7.0.2"
   },
   "ignoreScripts": [
     "sharp",
